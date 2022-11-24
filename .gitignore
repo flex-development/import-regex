@@ -1,0 +1,60 @@
+# macOS
+# ------------------------------------------------------------------------------
+.DS_*
+._*
+
+# Node
+# ------------------------------------------------------------------------------
+*.log
+*.pid
+*.pid.lock
+*.seed
+*.tgz
+*.zip
+.npm
+.yarn-integrity
+logs
+node_modules/
+npm-debug.log*
+pids
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+yarn-debug.log*
+yarn-error.log*
+
+# Yarn 2 (Not using Zero-Installs)
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+# ------------------------------------------------------------------------------
+.pnp.*
+.yarn/*
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Environment
+# ------------------------------------------------------------------------------
+.env*.local
+
+# TypeScript
+# ------------------------------------------------------------------------------
+*.tsbuildinfo
+
+# Testing
+# ------------------------------------------------------------------------------
+*.lcov
+__tests__/report.json
+coverage/
+vitest.config.*.timestamp-*.mjs
+
+# ESLint
+# ------------------------------------------------------------------------------
+.eslintcache
+
+# Builds
+# ------------------------------------------------------------------------------
+dist/
+!typings/**/dist/
+
+# Scratch work
+# ------------------------------------------------------------------------------
+scratch.ts

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "allowCompoundWords": true,
+  "caseSensitive": false,
+  "dictionaries": ["@flex-development/import-regex"],
+  "dictionaryDefinitions": [
+    {
+      "name": "@flex-development/import-regex",
+      "path": "./.dictionary.txt"
+    }
+  ],
+  "enableGlobDot": true,
+  "failFast": false,
+  "flagWords": [],
+  "ignorePaths": [
+    "**/*.snap",
+    "**/.gitconfig",
+    "**/.gitignore",
+    "**/.gitkeep",
+    "**/.npmignore",
+    ".cspell.json",
+    ".env*",
+    ".eslintignore",
+    ".git/",
+    ".husky/_/",
+    ".markdownlintignore",
+    ".nvmrc",
+    ".prettierignore",
+    ".yarn/",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "__tests__/report.json",
+    "dist/",
+    "patches/",
+    "yarn.lock"
+  ],
+  "ignoreRegExpList": ["/@flex-development\\/.*/", "/from\\s+(['\"]).*\\1/"],
+  "ignoreWords": [],
+  "language": "en-US",
+  "patterns": [],
+  "readonly": true,
+  "useGitignore": true,
+  "usePnP": false,
+  "version": "0.2",
+  "words": ["fldv", "flexdevelopmentllc"]
+}

@@ -1,0 +1,219 @@
+{
+  "[handlebars]": {
+    "editor.defaultFormatter": "Greenbyte.handlebars-preview",
+    "editor.rulers": [
+      {
+        "color": "var(--vscode-editorRuler-foreground)",
+        "column": 100
+      }
+    ],
+    "editor.wordWrapColumn": 100,
+    "rewrap.wrappingColumn": 100
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[jest-snapshot]": {
+    "editor.rulers": [
+      {
+        "color": "var(--vscode-editorRuler-foreground)",
+        "column": 130
+      }
+    ],
+    "editor.wordWrapColumn": 130,
+    "rewrap.wrappingColumn": 130
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "vscode.markdown-language-features",
+    "editor.rulers": [
+      {
+        "color": "var(--vscode-editorRuler-foreground)",
+        "column": 120
+      }
+    ],
+    "editor.wordWrapColumn": 120,
+    "rewrap.wrappingColumn": 120
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[shellscript]": {
+    "editor.rulers": [
+      {
+        "color": "var(--vscode-editorRuler-foreground)",
+        "column": 100
+      }
+    ],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "rewrap.wrappingColumn": 100
+  },
+  "[yaml]": {
+    "editor.rulers": [
+      {
+        "color": "var(--vscode-editorRuler-foreground)",
+        "column": 100
+      }
+    ],
+    "editor.wordWrapColumn": 100,
+    "rewrap.wrappingColumn": 100
+  },
+  "cSpell.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.autoClosingBrackets": "always",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.sortJSON": false,
+    "source.organizeImports": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.renderFinalNewline": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.guides.indentation": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.overviewRulerBorder": true,
+  "editor.rulers": [
+    {
+      // microsoft/vscode#166261
+      "color": "var(--vscode-editorRuler-foreground)",
+      "column": 80
+    }
+  ],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80,
+  "emmet.excludeLanguages": [],
+  "emmet.includeLanguages": {
+    "markdown": "html"
+  },
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.triggerExpansionOnTab": true,
+  "eslint.enable": true,
+  "eslint.nodePath": "./node_modules/eslint",
+  "eslint.options": {
+    "extensions": [
+      "cjs",
+      "cts",
+      "gql",
+      "json",
+      "jsonc",
+      "md",
+      "mjs",
+      "ts",
+      "yml"
+    ],
+    "overrideConfigFile": "./.eslintrc.cjs"
+  },
+  "eslint.validate": [
+    "graphql",
+    "javascript",
+    "json",
+    "jsonc",
+    "markdown",
+    "typescript",
+    "yaml"
+  ],
+  "files.associations": {
+    "*.snap": "jest-snapshot",
+    ".env.zsh": "shellscript",
+    ".markdownlintignore": "ignore",
+    "commit-msg": "shellscript",
+    "pre-commit": "shellscript",
+    "pre-push": "shellscript"
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/yarn.lock": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "markdown.extension.toc.slugifyMode": "github",
+  "markdown.extension.toc.updateOnSave": false,
+  "markdownlint.ignore": "./.markdownlintignore",
+  "markdownlint.lintWorkspaceGlobs": [
+    "**/*.md",
+    "!**/node_modules",
+    "!**/.git",
+    "!**/CHANGELOG.md",
+    "!**/LICENSE.md"
+  ],
+  "npm-intellisense.scanDevDependencies": true,
+  "prettier.enable": false,
+  "prettier.useEditorConfig": false,
+  "shellformat.flag": "-ci -fn -i=2 -sr",
+  "shellformat.useEditorConfig": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.completeJSDocs": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "versionlens.npm.dependencyProperties": ["dependencies", "devDependencies"],
+  "vsicons.associations.files": [
+    {
+      "extensions": [".eslintrc.base.cjs"],
+      "format": "svg",
+      "icon": "eslint"
+    },
+    {
+      "extensions": [".graphqlrc.yml"],
+      "format": "svg",
+      "icon": "graphql"
+    },
+    {
+      "extensions": ["build.json"],
+      "format": "svg",
+      "icon": "tsconfig"
+    },
+    {
+      "extensions": ["snap"],
+      "format": "svg",
+      "icon": "vitest"
+    },
+    {
+      "extensions": ["yarnrc.yml"],
+      "format": "svg",
+      "icon": "yarn"
+    }
+  ],
+  "vsicons.associations.folders": [
+    {
+      "extensions": ["__fixtures__"],
+      "format": "svg",
+      "icon": "data"
+    },
+    {
+      "extensions": ["__snapshots__"],
+      "format": "svg",
+      "icon": "temp"
+    },
+    {
+      "extensions": ["patches"],
+      "format": "svg",
+      "icon": "include"
+    },
+    {
+      "extensions": ["setup"],
+      "format": "svg",
+      "icon": "config"
+    },
+    {
+      "extensions": ["types"],
+      "format": "svg",
+      "icon": "typings"
+    }
+  ],
+  "workbench.iconTheme": "vscode-icons",
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-issue-config": "/.github/ISSUE_TEMPLATE/config.yml",
+    "https://json.schemastore.org/github-workflow": "/.github/workflows/*.yml"
+  }
+}
