@@ -34,7 +34,11 @@
     "patches/",
     "yarn.lock"
   ],
-  "ignoreRegExpList": ["/@flex-development\\/.*/", "/from\\s+(['\"]).*\\1/"],
+  "ignoreRegExpList": [
+    "/@flex-development\\/.*/",
+    "/from\\s+(['\"]).*\\1/",
+    "import\\(.*\\)"
+  ],
   "ignoreWords": [],
   "language": "en-US",
   "patterns": [],

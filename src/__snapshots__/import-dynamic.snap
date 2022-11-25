@@ -1,0 +1,249 @@
+// Vitest Snapshot v1
+
+exports[`unit:DYNAMIC_IMPORT_REGEX > conditional imports > should match conditional import 1`] = `
+{
+  "0": "mod = await import('module-used-on-server')",
+  "1": "mod",
+  "2": "import('module-used-on-server')",
+  "3": "'module-used-on-server'",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "expression": "import('module-used-on-server')",
+    "imports": "mod",
+    "specifier": "'module-used-on-server'",
+  },
+  "index": 48,
+}
+`;
+
+exports[`unit:DYNAMIC_IMPORT_REGEX > dynamic specifiers > should match import with template literal as specifier 1`] = `
+{
+  "0": "import(\`/modules/module-\${index}.js\`)",
+  "1": undefined,
+  "2": "import(\`/modules/module-\${index}.js\`)",
+  "3": "\`/modules/module-\${index}.js\`",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "expression": "import(\`/modules/module-\${index}.js\`)",
+    "imports": undefined,
+    "specifier": "\`/modules/module-\${index}.js\`",
+  },
+  "index": 56,
+}
+`;
+
+exports[`unit:DYNAMIC_IMPORT_REGEX > dynamic specifiers > should match import with variable as specifier 1`] = `
+{
+  "0": "await import(foo)",
+  "1": undefined,
+  "2": "import(foo)",
+  "3": "foo",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "expression": "import(foo)",
+    "imports": undefined,
+    "specifier": "foo",
+  },
+  "index": 27,
+}
+`;
+
+exports[`unit:DYNAMIC_IMPORT_REGEX > import assertions > should match import with import assertion 1`] = `
+{
+  "0": "await import('__tests__/report.json', {
+  assert: { type: 'json' }
+})",
+  "1": undefined,
+  "2": "import('__tests__/report.json', {
+  assert: { type: 'json' }
+})",
+  "3": "'__tests__/report.json'",
+  "4": "{ type: 'json' }",
+  "groups": {
+    "assertion": "{ type: 'json' }",
+    "expression": "import('__tests__/report.json', {
+  assert: { type: 'json' }
+})",
+    "imports": undefined,
+    "specifier": "'__tests__/report.json'",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:DYNAMIC_IMPORT_REGEX > named imports > should match named import(s) in multi-line statement 1`] = `
+{
+  "0": "const {
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+} = await import('./lib')",
+  "1": "{
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+}",
+  "2": "import('./lib')",
+  "3": "'./lib'",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "expression": "import('./lib')",
+    "imports": "{
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+}",
+    "specifier": "'./lib'",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:DYNAMIC_IMPORT_REGEX > named imports > should match named import(s) in single-line statement 1`] = `
+{
+  "0": "const { readPackage } = await import(\\"read-pkg\\")",
+  "1": "{ readPackage }",
+  "2": "import(\\"read-pkg\\")",
+  "3": "\\"read-pkg\\"",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "expression": "import(\\"read-pkg\\")",
+    "imports": "{ readPackage }",
+    "specifier": "\\"read-pkg\\"",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:DYNAMIC_IMPORT_REGEX > named imports > should match named import(s) with renamed identifiers 1`] = `
+{
+  "0": "const {
+      default: myDefault,
+      foo,
+      bar,
+    } = await import('/modules/my-module.js')",
+  "1": "{
+      default: myDefault,
+      foo,
+      bar,
+    }",
+  "2": "import('/modules/my-module.js')",
+  "3": "'/modules/my-module.js'",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "expression": "import('/modules/my-module.js')",
+    "imports": "{
+      default: myDefault,
+      foo,
+      bar,
+    }",
+    "specifier": "'/modules/my-module.js'",
+  },
+  "index": 44,
+}
+`;
+
+exports[`unit:DYNAMIC_IMPORT_REGEX > named imports > should match named import(s) with renamed string literals 1`] = `
+[
+  {
+    "0": "const { \\"h-i\\": hi } = await import('./hi.js')",
+    "1": "{ \\"h-i\\": hi }",
+    "2": "import('./hi.js')",
+    "3": "'./hi.js'",
+    "4": undefined,
+    "groups": {
+      "assertion": undefined,
+      "expression": "import('./hi.js')",
+      "imports": "{ \\"h-i\\": hi }",
+      "specifier": "'./hi.js'",
+    },
+    "index": 0,
+  },
+  {
+    "0": "const { 'j-k': jk } = await import(\\"./jk.js\\")",
+    "1": "{ 'j-k': jk }",
+    "2": "import(\\"./jk.js\\")",
+    "3": "\\"./jk.js\\"",
+    "4": undefined,
+    "groups": {
+      "assertion": undefined,
+      "expression": "import(\\"./jk.js\\")",
+      "imports": "{ 'j-k': jk }",
+      "specifier": "\\"./jk.js\\"",
+    },
+    "index": 46,
+  },
+]
+`;
+
+exports[`unit:DYNAMIC_IMPORT_REGEX > namespace imports > should match namespace import 1`] = `
+{
+  "0": "const color = await import(\\"colorette\\")",
+  "1": "color",
+  "2": "import(\\"colorette\\")",
+  "3": "\\"colorette\\"",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "expression": "import(\\"colorette\\")",
+    "imports": "color",
+    "specifier": "\\"colorette\\"",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:DYNAMIC_IMPORT_REGEX > side-effect imports > should match side-effect import 1`] = `
+{
+  "0": "await import('./modules/my-module.js')",
+  "1": undefined,
+  "2": "import('./modules/my-module.js')",
+  "3": "'./modules/my-module.js'",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "expression": "import('./modules/my-module.js')",
+    "imports": undefined,
+    "specifier": "'./modules/my-module.js'",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:DYNAMIC_IMPORT_REGEX > then/catch > should match import without await 1`] = `
+{
+  "0": "import(\\"/modules/my-module.js\\")",
+  "1": undefined,
+  "2": "import(\\"/modules/my-module.js\\")",
+  "3": "\\"/modules/my-module.js\\"",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "expression": "import(\\"/modules/my-module.js\\")",
+    "imports": undefined,
+    "specifier": "\\"/modules/my-module.js\\"",
+  },
+  "index": 176,
+}
+`;
