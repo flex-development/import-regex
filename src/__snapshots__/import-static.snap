@@ -1,0 +1,283 @@
+// Vitest Snapshot v1
+
+exports[`unit:STATIC_IMPORT_REGEX > default imports > should match default import 1`] = `
+{
+  "0": "import pb from 'pretty-bytes'",
+  "1": undefined,
+  "2": "pb",
+  "3": "pretty-bytes",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "imports": "pb",
+    "specifier": "pretty-bytes",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > default imports > should match default import with import assertion 1`] = `
+{
+  "0": "import pkg from './package.json' assert { type: 'json' }",
+  "1": undefined,
+  "2": "pkg",
+  "3": "./package.json",
+  "4": "{ type: 'json' }",
+  "groups": {
+    "assertion": "{ type: 'json' }",
+    "imports": "pkg",
+    "specifier": "./package.json",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > default imports > should match default import with named imports 1`] = `
+{
+  "0": "import foo, { bar } from \\"module-name\\"",
+  "1": undefined,
+  "2": "foo, { bar }",
+  "3": "module-name",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "imports": "foo, { bar }",
+    "specifier": "module-name",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > default imports > should match default import with namespace imports 1`] = `
+{
+  "0": "import foo, * as bar from \\"module-name\\"",
+  "1": undefined,
+  "2": "foo, * as bar",
+  "3": "module-name",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "imports": "foo, * as bar",
+    "specifier": "module-name",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > default imports > should match default type import 1`] = `
+{
+  "0": "import type Foo from 'module-name'",
+  "1": "type",
+  "2": "Foo",
+  "3": "module-name",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "imports": "Foo",
+    "specifier": "module-name",
+    "type": "type",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > named imports > should match named import(s) in multi-line statement 1`] = `
+{
+  "0": "import {
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+} from './lib'",
+  "1": undefined,
+  "2": "{
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+}",
+  "3": "./lib",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "imports": "{
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+}",
+    "specifier": "./lib",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > named imports > should match named import(s) in single-line statement 1`] = `
+{
+  "0": "import { readPackage, type PackageJson } from \\"read-pkg\\"",
+  "1": undefined,
+  "2": "{ readPackage, type PackageJson }",
+  "3": "read-pkg",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "imports": "{ readPackage, type PackageJson }",
+    "specifier": "read-pkg",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > named imports > should match named import(s) with renamed identifiers 1`] = `
+{
+  "0": "import { foo as bar } from 'module-name'",
+  "1": undefined,
+  "2": "{ foo as bar }",
+  "3": "module-name",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "imports": "{ foo as bar }",
+    "specifier": "module-name",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > named imports > should match named import(s) with renamed string literals 1`] = `
+[
+  {
+    "0": "import { \\"h-i\\" as hi } from './hi.js'",
+    "1": undefined,
+    "2": "{ \\"h-i\\" as hi }",
+    "3": "./hi.js",
+    "4": undefined,
+    "groups": {
+      "assertion": undefined,
+      "imports": "{ \\"h-i\\" as hi }",
+      "specifier": "./hi.js",
+      "type": undefined,
+    },
+    "index": 0,
+  },
+  {
+    "0": "import { 'j-k' as jk } from \\"./jk.js\\"",
+    "1": undefined,
+    "2": "{ 'j-k' as jk }",
+    "3": "./jk.js",
+    "4": undefined,
+    "groups": {
+      "assertion": undefined,
+      "imports": "{ 'j-k' as jk }",
+      "specifier": "./jk.js",
+      "type": undefined,
+    },
+    "index": 38,
+  },
+]
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > named imports > should match named type import(s) in multi-line statement 1`] = `
+{
+  "0": "import type {
+  BuildOptions,
+  BuildResult,
+  OutputFile,
+  Plugin,
+  PluginBuild
+} from 'esbuild'",
+  "1": "type",
+  "2": "{
+  BuildOptions,
+  BuildResult,
+  OutputFile,
+  Plugin,
+  PluginBuild
+}",
+  "3": "esbuild",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "imports": "{
+  BuildOptions,
+  BuildResult,
+  OutputFile,
+  Plugin,
+  PluginBuild
+}",
+    "specifier": "esbuild",
+    "type": "type",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > named imports > should match named type import(s) in single-line statement 1`] = `
+{
+  "0": "import type { Nullable } from '@flex-development/tutils'",
+  "1": "type",
+  "2": "{ Nullable }",
+  "3": "@flex-development/tutils",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "imports": "{ Nullable }",
+    "specifier": "@flex-development/tutils",
+    "type": "type",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > namespace imports > should match namespace import 1`] = `
+{
+  "0": "import * as color from 'colorette'",
+  "1": undefined,
+  "2": "* as color",
+  "3": "colorette",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "imports": "* as color",
+    "specifier": "colorette",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:STATIC_IMPORT_REGEX > side-effect imports > should match side-effect import 1`] = `
+{
+  "0": "import \\"./polyfill.mjs\\"",
+  "1": undefined,
+  "2": undefined,
+  "3": "./polyfill.mjs",
+  "4": undefined,
+  "groups": {
+    "assertion": undefined,
+    "imports": undefined,
+    "specifier": "./polyfill.mjs",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;

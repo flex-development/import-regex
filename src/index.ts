@@ -3,4 +3,4 @@
  * @module import-regex
  */
 
-export {}
+export { default as STATIC_IMPORT_REGEX } from './import-static'
