@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/flex-development/import-regex/compare/1.0.0...1.0.1) (2022-11-25)
+
+
+### :pencil: Documentation
+
+* add usage docs ([e0ca4e9](https://github.com/flex-development/import-regex/commit/e0ca4e95ad60f3e03e114bad0e3cca5b9a865ec0))
+
 ## 1.0.0
 
 
