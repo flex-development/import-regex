@@ -6,7 +6,9 @@
 /**
  * Dynamic `import` statement regex. Ignores matches in comments.
  *
- * **Note**: Requires unicode support.
+ * **Note**: Requires unicode support ([flag `u`][1]).
+ *
+ * [1]: https://javascript.info/regexp-unicode
  *
  * @see https://regex101.com/r/PTPAvU
  *

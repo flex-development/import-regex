@@ -1,6 +1,7 @@
 ardatan
 bdougie
 cefc
+colorette
 commitlintrc
 dawidd
 dedupe
