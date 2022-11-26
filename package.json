@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/import-regex",
   "description": "Import statement regex",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "keywords": [
     "dynamic",
     "ecmascript",
@@ -150,5 +150,5 @@
   "packageManager": "yarn@4.0.0-rc.14",
   "readme": "README.md",
   "sideEffects": false,
-  "tagPrefix": "import-regex@"
+  "tagPrefix": ""
 }
