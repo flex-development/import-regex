@@ -62,7 +62,7 @@ jobs:
         uses: hmarr/debug-action@v2.1.0
       - id: yarn
         name: Install dependencies
-        run: yarn ${{ github.actor == 'dependabot[bot]' && '' || '--no-immutable' }}
+        run: yarn --no-immutable
       - id: format
         name: Check code formatting
         run: yarn check:format
