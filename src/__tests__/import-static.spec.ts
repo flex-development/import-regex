@@ -4,7 +4,7 @@
  */
 
 import { omit } from 'radash'
-import dedent from 'ts-dedent'
+import { dedent } from 'ts-dedent'
 import TEST_SUBJECT from '../import-static'
 
 describe('unit:STATIC_IMPORT_REGEX', () => {

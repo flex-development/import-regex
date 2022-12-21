@@ -62,7 +62,7 @@ Suppose we have the following module:
 ```typescript
 import * as regexp from '@flex-development/import-regex'
 import { omit } from 'radash'
-import dedent from 'ts-dedent'
+import { dedent } from 'ts-dedent'
 
 const code: string = dedent`
   import { defineBuildConfig, type Config } from '@flex-development/mkbuild'

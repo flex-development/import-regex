@@ -4,7 +4,7 @@
  */
 
 import { omit } from 'radash'
-import dedent from 'ts-dedent'
+import { dedent } from 'ts-dedent'
 import TEST_SUBJECT from '../import-dynamic'
 
 describe('unit:DYNAMIC_IMPORT_REGEX', () => {
