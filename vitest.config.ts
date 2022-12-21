@@ -22,30 +22,13 @@ import { BaseSequencer } from 'vitest/node'
  * @const {UserConfigExport} config
  */
 const config: UserConfigExport = defineConfig((): UserConfig => {
-  /**
-   * Absolute path to [experimental loader for Node.js][1].
-   *
-   * [1]: https://nodejs.org/docs/latest-v16.x/api/esm.html#loaders
-   *
-   * @const {string} NODE_LOADER_PATH
-   */
-  const NODE_LOADER_PATH: string = path.resolve('loader.mjs')
-
-  /**
-   * Absolute path to tsconfig file.
-   *
-   * @const {string} TSCONFIG_PATH
-   */
-  const TSCONFIG_PATH: string = path.resolve('tsconfig.json')
-
   return {
     define: {
       'import.meta.env.CI': JSON.stringify(ci),
-      'import.meta.env.NODE_ENV': JSON.stringify(NodeEnv.TEST),
-      'process.env.NODE_OPTIONS': JSON.stringify(`--loader=${NODE_LOADER_PATH}`)
+      'import.meta.env.NODE_ENV': JSON.stringify(NodeEnv.TEST)
     },
     mode: NodeEnv.TEST,
-    plugins: [tsconfigpaths({ projects: [TSCONFIG_PATH] })],
+    plugins: [tsconfigpaths({ projects: [path.resolve('tsconfig.json')] })],
     test: {
       allowOnly: !ci,
       clearMocks: true,
@@ -55,7 +38,7 @@ const config: UserConfigExport = defineConfig((): UserConfig => {
         exclude: ['**/__mocks__/**', '**/__tests__/**', '**/index.ts'],
         extension: ['.ts'],
         include: ['src'],
-        reporter: ['json-summary', 'lcov', 'text'],
+        reporter: [ci ? 'lcovonly' : 'lcov', 'text'],
         reportsDirectory: './coverage',
         skipFull: false
       },
@@ -68,9 +51,7 @@ const config: UserConfigExport = defineConfig((): UserConfig => {
       include: ['**/__tests__/*.spec.ts', '**/__tests__/*.spec-d.ts'],
       isolate: true,
       mockReset: true,
-      outputFile: {
-        json: './__tests__/report.json'
-      },
+      outputFile: { json: './__tests__/report.json' },
       passWithNoTests: true,
       reporters: [
         'json',
