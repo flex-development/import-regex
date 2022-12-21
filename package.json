@@ -44,7 +44,7 @@
     "check:format": "prettier --check .",
     "check:lint": "eslint --exit-on-fatal-error --ext cjs,cts,gql,json,jsonc,md,mjs,ts,yml --max-warnings 0 .",
     "check:spelling": "cspell lint --color --no-progress --relative $@ \"**\"",
-    "check:types": "tsc -p tsconfig.json",
+    "check:types": "tsc -p tsconfig.typecheck.json",
     "check:types:build": "tsc -p tsconfig.build.json",
     "check:upgrades": "yarn upgrade-interactive",
     "clean:build": "trash ./{dist,*.tgz}",
@@ -67,7 +67,9 @@
     "test": "vitest run",
     "test:cov": "yarn clean:coverage; yarn test --coverage",
     "test:cov:serve": "serve -l 5342 ./coverage/lcov-report",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "typecheck": "vitest typecheck --run",
+    "typecheck:watch": "vitest typecheck"
   },
   "devDependencies": {
     "@commitlint/cli": "17.3.0",

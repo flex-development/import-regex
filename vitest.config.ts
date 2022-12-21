@@ -65,7 +65,7 @@ const config: UserConfigExport = defineConfig((): UserConfig => {
       ],
       globals: true,
       hookTimeout: 10 * 1000,
-      include: ['**/__tests__/*.spec.ts'],
+      include: ['**/__tests__/*.spec.ts', '**/__tests__/*.spec-d.ts'],
       isolate: true,
       mockReset: true,
       outputFile: {
@@ -116,7 +116,14 @@ const config: UserConfigExport = defineConfig((): UserConfig => {
         min: false,
         printFunctionName: true
       },
-      testTimeout: 15 * 1000
+      testTimeout: 15 * 1000,
+      typecheck: {
+        allowJs: false,
+        checker: 'tsc',
+        ignoreSourceErrors: false,
+        include: ['**/__tests__/*.spec-d.ts'],
+        tsconfig: path.resolve('tsconfig.typecheck.json')
+      }
     }
   }
 })

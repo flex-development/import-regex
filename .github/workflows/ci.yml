@@ -72,12 +72,9 @@ jobs:
       - id: spelling
         name: Check spelling
         run: yarn check:spelling
-      - id: types
-        name: Check types
+      - id: typecheck
+        name: Run typecheck
         run: yarn check:types
-      - id: types-build
-        name: Check types build
-        run: yarn check:types:build
       - id: test
         name: Run tests
         run: yarn test:cov

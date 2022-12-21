@@ -169,7 +169,7 @@
       "icon": "graphql"
     },
     {
-      "extensions": ["build.json"],
+      "extensions": ["build.json", "typecheck.json"],
       "format": "svg",
       "icon": "tsconfig"
     },
