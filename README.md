@@ -184,7 +184,7 @@ print(code.matchAll(regexp.DYNAMIC_IMPORT_REGEX))
       imports: '{ readPackage }',
       expression: "import('read-pkg')",
       specifier: "'read-pkg'",
-      assertion: undefined
+      options: undefined
     }
   },
   {
@@ -198,7 +198,7 @@ print(code.matchAll(regexp.DYNAMIC_IMPORT_REGEX))
       imports: undefined,
       expression: "import('./side-effect.mjs')",
       specifier: "'./side-effect.mjs'",
-      assertion: undefined
+      options: undefined
     }
   },
   {
@@ -212,7 +212,7 @@ print(code.matchAll(regexp.DYNAMIC_IMPORT_REGEX))
       imports: undefined,
       expression: 'import(se2)',
       specifier: 'se2',
-      assertion: undefined
+      options: undefined
     }
   }
 ]
