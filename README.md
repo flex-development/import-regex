@@ -219,17 +219,23 @@ print(code.matchAll(regexp.DYNAMIC_IMPORT_REGEX))
 
 ## API
 
-This package exports the identifiers `DYNAMIC_IMPORT_REGEX` and `STATIC_IMPORT_REGEX`. There is no default export.
+This package exports the identifiers `DYNAMIC_IMPORT_REGEX` and `STATIC_IMPORT_REGEX`.
+
+There is no default export.
 
 ### `DYNAMIC_IMPORT_REGEX`
 
-Dynamic `import` statement regex.
+- **Source**: [`src/import-dynamic.ts`](src/import-dynamic.ts)
+
+Dynamic `import` statement regex. Ignores matches in comments.
 
 **Requires unicode support ([flag `u`][4])**.
 
 ### `STATIC_IMPORT_REGEX`
 
-Static `import` statement regex.
+- **Source**: [`src/import-static.ts`](src/import-static.ts)
+
+Static `import` statement regex. Ignores matches in comments.
 
 ## Types
 
