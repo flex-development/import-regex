@@ -1,3 +1,41 @@
+## [2.0.0](https://github.com/flex-development/import-regex/compare/1.0.1...2.0.0) (2022-12-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **regex:** [dynamic] capture options bag
+
+### :package: Build
+
+* **deps-dev:** bump deps according to `yarn upgrade-interactive` ([77a18b4](https://github.com/flex-development/import-regex/commit/77a18b48fabea61db9cf85268ab01f57cbd2d59f))
+
+
+### :robot: Continuous Integration
+
+* **deps:** Bump actions/checkout from 3.1.0 to 3.2.0 ([#4](https://github.com/flex-development/import-regex/issues/4)) ([98d9e99](https://github.com/flex-development/import-regex/commit/98d9e9998cb67c5b427c07a2686d1324ae743df1))
+* **deps:** Bump dessant/lock-threads from 3.0.0 to 4.0.0 ([#3](https://github.com/flex-development/import-regex/issues/3)) ([c744a7a](https://github.com/flex-development/import-regex/commit/c744a7a7bc0d7593a1e04379b4681f4f30b3dc2b))
+* **workflows:** [`ci`] fix `yarn` step ([b74d6dd](https://github.com/flex-development/import-regex/commit/b74d6dd721479d67d854c1a3519a60c5d817c78b))
+
+
+### :pencil: Documentation
+
+* reformat api docs ([1ab4590](https://github.com/flex-development/import-regex/commit/1ab45902df4d031aae3a0a4dfc9c703ceb022cab))
+* update usage example ([e509922](https://github.com/flex-development/import-regex/commit/e50992229070d8fb9e65ec8e4c7e371e5de9ba40))
+* **regex:** add `DYNAMIC_IMPORT_REGEX` example ([7c1cda6](https://github.com/flex-development/import-regex/commit/7c1cda667f1178dc33681f862ed2ec51729a4b7f))
+* **regex:** add `STATIC_IMPORT_REGEX` example ([6a8fad0](https://github.com/flex-development/import-regex/commit/6a8fad07d81862bed99a56b21b3a640192e92231))
+
+
+### :house_with_garden: Housekeeping
+
+* cleanup project architecture ([d738a26](https://github.com/flex-development/import-regex/commit/d738a26fc13deba2ba9d0d1d526f4fd896908ee3))
+* configure type testing ([757d22c](https://github.com/flex-development/import-regex/commit/757d22cfefe78f5f047fe490f0d8d4edd0050f2e))
+
+
+### :zap: Refactors
+
+* **regex:** [dynamic] capture options bag ([ccfea7c](https://github.com/flex-development/import-regex/commit/ccfea7ca944c24b70c48c822fc6e40900f2648ab))
+* **ts:** enforce `exactOptionalPropertyTypes` ([ce601f6](https://github.com/flex-development/import-regex/commit/ce601f61cf1241e3b8e21e53a4436dc7105484a8))
+
 ## [1.0.1](https://github.com/flex-development/import-regex/compare/1.0.0...1.0.1) (2022-11-25)
 
 
