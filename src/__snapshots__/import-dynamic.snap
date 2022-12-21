@@ -8,9 +8,9 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > conditional imports > should match conditio
   "3": "'module-used-on-server'",
   "4": undefined,
   "groups": {
-    "assertion": undefined,
     "expression": "import('module-used-on-server')",
     "imports": "mod",
+    "options": undefined,
     "specifier": "'module-used-on-server'",
   },
   "index": 48,
@@ -25,9 +25,9 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > dynamic specifiers > should match import wi
   "3": "\`/modules/module-\${index}.js\`",
   "4": undefined,
   "groups": {
-    "assertion": undefined,
     "expression": "import(\`/modules/module-\${index}.js\`)",
     "imports": undefined,
+    "options": undefined,
     "specifier": "\`/modules/module-\${index}.js\`",
   },
   "index": 56,
@@ -42,9 +42,9 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > dynamic specifiers > should match import wi
   "3": "foo",
   "4": undefined,
   "groups": {
-    "assertion": undefined,
     "expression": "import(foo)",
     "imports": undefined,
+    "options": undefined,
     "specifier": "foo",
   },
   "index": 27,
@@ -61,13 +61,17 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > import assertions > should match import wit
   assert: { type: 'json' }
 })",
   "3": "'__tests__/report.json'",
-  "4": "{ type: 'json' }",
+  "4": "{
+  assert: { type: 'json' }
+}",
   "groups": {
-    "assertion": "{ type: 'json' }",
     "expression": "import('__tests__/report.json', {
   assert: { type: 'json' }
 })",
     "imports": undefined,
+    "options": "{
+  assert: { type: 'json' }
+}",
     "specifier": "'__tests__/report.json'",
   },
   "index": 0,
@@ -100,7 +104,6 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > named imports > should match named import(s
   "3": "'./lib'",
   "4": undefined,
   "groups": {
-    "assertion": undefined,
     "expression": "import('./lib')",
     "imports": "{
   addFive,
@@ -112,6 +115,7 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > named imports > should match named import(s
   squareThree,
   squareTwo
 }",
+    "options": undefined,
     "specifier": "'./lib'",
   },
   "index": 0,
@@ -126,9 +130,9 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > named imports > should match named import(s
   "3": "\\"read-pkg\\"",
   "4": undefined,
   "groups": {
-    "assertion": undefined,
     "expression": "import(\\"read-pkg\\")",
     "imports": "{ readPackage }",
+    "options": undefined,
     "specifier": "\\"read-pkg\\"",
   },
   "index": 0,
@@ -151,13 +155,13 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > named imports > should match named import(s
   "3": "'/modules/my-module.js'",
   "4": undefined,
   "groups": {
-    "assertion": undefined,
     "expression": "import('/modules/my-module.js')",
     "imports": "{
       default: myDefault,
       foo,
       bar,
     }",
+    "options": undefined,
     "specifier": "'/modules/my-module.js'",
   },
   "index": 44,
@@ -173,9 +177,9 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > named imports > should match named import(s
     "3": "'./hi.js'",
     "4": undefined,
     "groups": {
-      "assertion": undefined,
       "expression": "import('./hi.js')",
       "imports": "{ \\"h-i\\": hi }",
+      "options": undefined,
       "specifier": "'./hi.js'",
     },
     "index": 0,
@@ -187,9 +191,9 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > named imports > should match named import(s
     "3": "\\"./jk.js\\"",
     "4": undefined,
     "groups": {
-      "assertion": undefined,
       "expression": "import(\\"./jk.js\\")",
       "imports": "{ 'j-k': jk }",
+      "options": undefined,
       "specifier": "\\"./jk.js\\"",
     },
     "index": 46,
@@ -205,9 +209,9 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > namespace imports > should match namespace 
   "3": "\\"colorette\\"",
   "4": undefined,
   "groups": {
-    "assertion": undefined,
     "expression": "import(\\"colorette\\")",
     "imports": "color",
+    "options": undefined,
     "specifier": "\\"colorette\\"",
   },
   "index": 0,
@@ -222,9 +226,9 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > side-effect imports > should match side-eff
   "3": "'./modules/my-module.js'",
   "4": undefined,
   "groups": {
-    "assertion": undefined,
     "expression": "import('./modules/my-module.js')",
     "imports": undefined,
+    "options": undefined,
     "specifier": "'./modules/my-module.js'",
   },
   "index": 0,
@@ -239,9 +243,9 @@ exports[`unit:DYNAMIC_IMPORT_REGEX > then/catch > should match import without aw
   "3": "\\"/modules/my-module.js\\"",
   "4": undefined,
   "groups": {
-    "assertion": undefined,
     "expression": "import(\\"/modules/my-module.js\\")",
     "imports": undefined,
+    "options": undefined,
     "specifier": "\\"/modules/my-module.js\\"",
   },
   "index": 176,
