@@ -20,6 +20,7 @@ mkbuild
 nocheck
 npmrc
 nums
+nvmrc
 pcre
 pkgs
 preid

@@ -26,14 +26,12 @@ on:
         description: release tag
         required: true
 env:
-  ARTIFACT:
+  ARTIFACT: |
     ${{ github.event.inputs.artifact || github.event.release.assets[0].browser_download_url }}
-  NODE_VERSION: 16
+  TAG: ${{ github.event.inputs.tag || github.event.release.tag_name }}
 jobs:
   metadata:
     runs-on: ubuntu-latest
-    env:
-      TAG: ${{ github.event.inputs.tag || github.event.release.tag_name }}
     outputs:
       dist-tag: ${{ steps.dist-tag.outputs.flag }}
       version: ${{ steps.version.outputs.result }}
@@ -65,12 +63,17 @@ jobs:
         ${{ format('{0}/{1}/pkgs/npm/{2}', github.server_url, github.repository,
         github.event.repository.name) }}
     steps:
+      - id: checkout
+        name: Checkout ${{ env.TAG }}
+        uses: actions/checkout@v3.2.0
+        with:
+          ref: ${{ format('refs/tags/{0}', env.TAG) }}
       - id: npmrc
         name: Setup .npmrc file
         uses: actions/setup-node@v3.5.1
         with:
           always-auth: true
-          node-version: ${{ env.NODE_VERSION }}
+          node-version-file: .nvmrc
           registry-url: https://npm.pkg.github.com
           scope: ${{ github.repository_owner }}
       - id: publish
@@ -87,12 +90,17 @@ jobs:
         ${{ format('https://npmjs.com/package/@{0}/v/{1}', github.repository,
         needs.metadata.outputs.version) }}
     steps:
+      - id: checkout
+        name: Checkout ${{ env.TAG }}
+        uses: actions/checkout@v3.2.0
+        with:
+          ref: ${{ format('refs/tags/{0}', env.TAG) }}
       - id: npmrc
         name: Setup .npmrc file
         uses: actions/setup-node@v3.5.1
         with:
           always-auth: true
-          node-version: ${{ env.NODE_VERSION }}
+          node-version-file: .nvmrc
           registry-url: https://registry.npmjs.org
           scope: ${{ github.repository_owner }}
       - id: publish
