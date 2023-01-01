@@ -7,17 +7,14 @@ dawidd
 dedupe
 dessant
 dohm
-esbenp
 esbuild
 fbca
 gpgsign
-graphqlrc
 hmarr
 iife
 keyid
 larsgw
 lcov
-lintstagedrc
 micnncim
 mkbuild
 nocheck
@@ -28,6 +25,4 @@ pkgs
 preid
 syncer
 vates
-vitest
-vsicons
 yarnrc

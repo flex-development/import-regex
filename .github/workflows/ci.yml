@@ -3,11 +3,14 @@
 # References:
 #
 # - https://docs.github.com/actions/automating-builds-and-tests/building-and-testing-nodejs
+# - https://docs.github.com/actions/learn-github-actions/contexts
 # - https://docs.github.com/actions/using-jobs/using-a-matrix-for-your-jobs
 # - https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#pull_request
 # - https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#push
 # - https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
 # - https://github.com/actions/checkout
+# - https://github.com/actions/setup-node
+# - https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#yarn2-configuration
 # - https://github.com/actions/upload-artifact
 # - https://github.com/hmarr/debug-action
 
@@ -56,13 +59,14 @@ jobs:
         uses: actions/setup-node@v3.5.1
         with:
           cache: yarn
+          cache-dependency-path: yarn.lock
           node-version: ${{ matrix.node-version }}
       - id: debug
         name: Print environment variables and event payload
         uses: hmarr/debug-action@v2.1.0
       - id: yarn
         name: Install dependencies
-        run: yarn --no-immutable
+        run: yarn ${{ github.actor == 'dependabot[bot]' && '--no-immutable' || '--immutable' }}
       - id: format
         name: Check code formatting
         run: yarn check:format
@@ -74,7 +78,7 @@ jobs:
         run: yarn check:spelling
       - id: typecheck
         name: Run typecheck
-        run: yarn check:types
+        run: yarn check:types && yarn check:types:build
       - id: test
         name: Run tests
         run: yarn test:cov --segfault-retry=3
@@ -83,20 +87,13 @@ jobs:
         run: yarn pack -o %s-%v.tgz
         env:
           NODE_ENV: production
-      - id: package-version
+      - id: version
         name: Get package version
         run: echo "result=$(jq .version package.json -r)" >> $GITHUB_OUTPUT
-      - id: coverage
-        name: Archive coverage report
-        uses: actions/upload-artifact@v3.1.1
-        with:
-          name: |
-            ${{ format('@{0}-{1}-{2}-lcov.info', github.repository_owner, github.event.repository.name, steps.package-version.outputs.result) }}
-          path: coverage/lcov.info
       - id: archive
         name: Archive production artifacts
         uses: actions/upload-artifact@v3.1.1
         with:
           name: |
-            ${{ format('@{0}-{1}-{2}', github.repository_owner, github.event.repository.name, steps.package-version.outputs.result) }}
+            ${{ format('@{0}-{1}-{2}', github.repository_owner, github.event.repository.name, steps.version.outputs.result) }}
           path: '*.tgz'

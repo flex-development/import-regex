@@ -338,7 +338,7 @@ const config = {
     'jsdoc/check-tag-names': [
       1,
       {
-        definedTags: ['next', 'visibleName'],
+        definedTags: ['experimental', 'next', 'visibleName'],
         jsxTags: jsx
       }
     ],
@@ -466,6 +466,7 @@ const config = {
     'no-array-constructor': 0,
     'no-case-declarations': 0,
     'no-duplicate-imports': 0,
+    'no-empty': [2, { allowEmptyCatch: true }],
     'no-empty-function': 0,
     'no-ex-assign': 0,
     'no-invalid-this': 0,
@@ -679,7 +680,7 @@ const config = {
         '@typescript-eslint/no-base-to-string': [
           2,
           {
-            ignoredTypeNames: ['RegExp']
+            ignoredTypeNames: ['Error', 'RegExp', 'URL', 'URLSearchParams']
           }
         ],
         '@typescript-eslint/no-floating-promises': [
@@ -995,16 +996,18 @@ const config = {
       }
     },
     {
-      files: ['**/__tests__/*.spec.*'],
+      files: ['**/__tests__/*.spec.ts', '**/__tests__/*.spec-d.ts'],
       globals: {
         afterAll: true,
         afterEach: true,
         assert: true,
+        assertType: true,
         beforeAll: true,
         beforeEach: true,
         chai: true,
         describe: true,
         expect: true,
+        expectTypeOf: true,
         faker: true,
         it: true,
         pf: true,
@@ -1034,11 +1037,13 @@ const config = {
         'promise/prefer-await-to-callbacks': 0,
         'promise/valid-params': 0,
         'unicorn/consistent-destructuring': 0,
+        'unicorn/error-message': 0,
         'unicorn/explicit-length-check': 0,
         'unicorn/no-array-for-each': 0,
         'unicorn/no-useless-undefined': 0,
         'unicorn/prefer-at': 0,
         'unicorn/prefer-dom-node-append': 0,
+        'unicorn/prefer-json-parse-buffer': 0,
         'unicorn/string-content': 0
       }
     },
@@ -1122,6 +1127,9 @@ const config = {
         enum: {
           name: 'namepath-defining',
           required: ['name', 'type']
+        },
+        experimental: {
+          name: 'none'
         },
         extends: {
           name: 'namepath-defining',
