@@ -29,7 +29,6 @@ env:
   ARTIFACT:
     ${{ github.event.inputs.artifact || github.event.release.assets[0].browser_download_url }}
   NODE_VERSION: 16
-  SCOPE: ${{ format('@{0}', github.repository_owner) }}
 jobs:
   metadata:
     runs-on: ubuntu-latest
@@ -73,7 +72,7 @@ jobs:
           always-auth: true
           node-version: ${{ env.NODE_VERSION }}
           registry-url: https://npm.pkg.github.com
-          scope: ${{ env.SCOPE }}
+          scope: ${{ github.repository_owner }}
       - id: publish
         name: Publish package
         run: npm publish $ARTIFACT ${{ needs.metadata.outputs.dist-tag }}
@@ -95,7 +94,7 @@ jobs:
           always-auth: true
           node-version: ${{ env.NODE_VERSION }}
           registry-url: https://registry.npmjs.org
-          scope: ${{ env.SCOPE }}
+          scope: ${{ github.repository_owner }}
       - id: publish
         name: Publish package
         run: npm publish $ARTIFACT ${{ needs.metadata.outputs.dist-tag }}
