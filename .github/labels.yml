@@ -30,6 +30,10 @@
   description: dependency updates
   color: 74cefc
 
+- name: scope:install
+  description: package install
+  color: 74cefc
+
 - name: scope:regex
   description: regular expressions
   color: 74cefc
