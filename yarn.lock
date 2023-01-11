@@ -1027,7 +1027,7 @@ __metadata:
     prettier: "npm:2.8.1"
     prettier-plugin-sh: "npm:0.12.8"
     pretty-format: "npm:29.3.1"
-    radash: "npm:10.3.2"
+    radash: "npm:10.6.0"
     serve: "npm:14.1.2"
     trash-cli: "npm:5.0.0"
     ts-dedent: "npm:2.2.0"
@@ -7092,10 +7092,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"radash@npm:10.3.2":
-  version: 10.3.2
-  resolution: "radash@npm:10.3.2"
-  checksum: a2d28e9ec733d9fe912160ca59c9ec9cfe6c148b18f47b8783282fa48de66af98b94ad2061f28a6cd0b8eda8ce3ba9da15879c45656c3bcf557764a9900130e3
+"radash@npm:10.6.0":
+  version: 10.6.0
+  resolution: "radash@npm:10.6.0"
+  checksum: dea4869d4e70d617bd1b861ee9520bd1c263a146882d8a4aab31defb89cdd3becccd7385e1379a5be35ecaaa29ca4f29f99a2261d6ede0bb4729d2ae710afe3b
   languageName: node
   linkType: hard
 
