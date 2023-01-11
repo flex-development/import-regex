@@ -126,7 +126,7 @@
     "prettier": "2.8.1",
     "prettier-plugin-sh": "0.12.8",
     "pretty-format": "29.3.1",
-    "radash": "10.3.2",
+    "radash": "10.6.0",
     "serve": "14.1.2",
     "trash-cli": "5.0.0",
     "ts-dedent": "2.2.0",
