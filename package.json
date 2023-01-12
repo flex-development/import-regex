@@ -75,7 +75,7 @@
     "typecheck:watch": "vitest typecheck"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.3.0",
+    "@commitlint/cli": "17.4.1",
     "@commitlint/config-conventional": "17.3.0",
     "@faker-js/faker": "8.0.0-alpha.0",
     "@flex-development/mkbuild": "1.0.0-alpha.9",
