@@ -1,3 +1,5 @@
+// MARKDOWNLINT CONFIGURATION
+// https://github.com/DavidAnson/vscode-markdownlint#configure
 {
   "MD001": true,
   "MD002": {

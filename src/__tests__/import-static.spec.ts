@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - STATIC_IMPORT_REGEX
- * @module import-regex/tests/static/unit
+ * @module import-regex/tests/unit/static
  */
 
 import { omit } from 'radash'

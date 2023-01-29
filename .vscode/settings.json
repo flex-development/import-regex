@@ -218,7 +218,8 @@
     "!**/node_modules",
     "!**/.git",
     "!**/CHANGELOG.md",
-    "!**/LICENSE.md"
+    "!**/LICENSE.md",
+    "!**/RELEASE_NOTES.md"
   ],
   "npm-intellisense.scanDevDependencies": true,
   "prettier.configPath": ".prettierrc.json",
@@ -232,6 +233,17 @@
   "shellformat.flag": "-ci -fn -i=2 -sr",
   "shellformat.useEditorConfig": true,
   "terminal.integrated.copyOnSelection": true,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "[ ]",
+    "[x]",
+    "@todo"
+  ],
+  "todo-tree.regex.regex": "((/?\\*|//|#|<!--|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+  "todo-tree.tree.scanMode": "workspace",
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
   "typescript.format.insertSpaceAfterTypeAssertion": true,
   "typescript.format.semicolons": "remove",
@@ -274,6 +286,11 @@
       "extensions": ["snap"],
       "format": "svg",
       "icon": "vitest"
+    },
+    {
+      "extensions": ["spec-d.ts"],
+      "format": "svg",
+      "icon": "testts"
     },
     {
       "extensions": ["yarnrc.yml"],

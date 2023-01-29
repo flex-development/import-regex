@@ -22,9 +22,17 @@ import { BaseSequencer } from 'vitest/node'
  * @const {UserConfigExport} config
  */
 const config: UserConfigExport = defineConfig((): UserConfig => {
+  /**
+   * [`lint-staged`][1] check.
+   *
+   * [1]: https://github.com/okonet/lint-staged
+   *
+   * @const {boolean} LINT_STAGED
+   */
+  const LINT_STAGED: boolean = !!Number.parseInt(process.env.LINT_STAGED ?? '0')
+
   return {
     define: {
-      'import.meta.env.CI': JSON.stringify(ci),
       'import.meta.env.NODE_ENV': JSON.stringify(NodeEnv.TEST)
     },
     mode: NodeEnv.TEST,
@@ -33,8 +41,9 @@ const config: UserConfigExport = defineConfig((): UserConfig => {
       allowOnly: !ci,
       clearMocks: true,
       coverage: {
-        all: true,
+        all: !LINT_STAGED,
         clean: true,
+        cleanOnRerun: true,
         exclude: ['**/__mocks__/**', '**/__tests__/**', '**/index.ts'],
         extension: ['.ts'],
         include: ['src'],
@@ -48,7 +57,10 @@ const config: UserConfigExport = defineConfig((): UserConfig => {
       ],
       globals: true,
       hookTimeout: 10 * 1000,
-      include: ['**/__tests__/*.spec.ts', '**/__tests__/*.spec-d.ts'],
+      include: [
+        '**/__tests__/*.spec.ts',
+        LINT_STAGED ? '**/__tests__/*.spec-d.ts' : ''
+      ].filter(pattern => pattern.length > 0),
       isolate: true,
       mockReset: true,
       outputFile: { json: './__tests__/report.json' },

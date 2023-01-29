@@ -12,6 +12,7 @@
     "exactOptionalPropertyTypes": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
+    "ignoreDeprecations": "5.0",
     "importsNotUsedAsValues": "error",
     "isolatedModules": true,
     "lib": ["es2020"],
@@ -45,27 +46,10 @@
     "strict": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "suppressImplicitAnyIndexErrors": true,
     "target": "esnext",
     "useDefineForClassFields": true,
     "useUnknownInCatchVariables": true
   },
   "exclude": ["./coverage", "./dist", "./node_modules"],
-  "include": [
-    "**/**.cjs",
-    "**/**.cts",
-    "**/**.mjs",
-    "**/**.mts",
-    "**/**.ts",
-    "**/.*.cjs"
-  ],
-  "ts-node": {
-    "compilerOptions": {},
-    "esm": true,
-    "experimentalResolver": true,
-    "experimentalSpecifierResolution": "node",
-    "moduleTypes": {},
-    "require": [],
-    "transpileOnly": true
-  }
+  "include": ["**/**.cjs", "**/**.mjs", "**/**.ts", "**/.*.cjs"]
 }

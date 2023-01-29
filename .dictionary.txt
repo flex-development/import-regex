@@ -13,9 +13,11 @@ fbca
 gpgsign
 hmarr
 iife
+infile
 keyid
 larsgw
 lcov
+lintstagedrc
 micnncim
 mkbuild
 nocheck
@@ -24,6 +26,7 @@ nums
 nvmrc
 pcre
 pkgs
+pnpm
 preid
 syncer
 vates

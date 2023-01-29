@@ -1,29 +1,16 @@
-declare global {
-  /**
-   * Determines how `url` should be interpreted, retrieved, and parsed.
-   * Also in charge of validating import assertions, `context.importAssertions`.
-   *
-   * @see https://nodejs.org/docs/latest-v16.x/api/all.html#all_esm_loadurl-context-defaultload
-   *
-   * @async
-   *
-   * @param {string} url - `file:` url of module
-   * @param {LoadHookContext} context - Hook context
-   * @param {(LoaderHookFormat | null)?} [context.format] - Module format
-   * @param {ImportAssertions} context.importAssertions - Import assertions map
-   * @param {LoadHook} defaultLoad - Default Node.js `load` function
-   * @return {Promise<LoadHookResult>} Hook result
-   */
-  declare type LoadHook = (
-    url: string,
-    context: LoadHookContext,
-    defaultLoad: LoadHook
-  ) => Promise<LoadHookResult>
+import type { Format } from '@flex-development/mlly'
+import type { Nullable, TypedArray } from '@flex-development/tutils'
 
+declare global {
   /**
    * {@link LoadHook} context.
    */
   declare interface LoadHookContext {
+    /**
+     * Export conditions of relevant `package.json`.
+     */
+    conditions: string[]
+
     /**
      * Module format.
      */
@@ -32,7 +19,7 @@ declare global {
     /**
      * Import assertions map.
      */
-    importAssertions?: ImportAssertions
+    importAssertions: ImportAssertions
   }
 
   /**
@@ -42,55 +29,50 @@ declare global {
     /**
      * Module format.
      */
-    format: LoaderHookFormat
+    format: Format | Lowercase<keyof typeof Format>
 
     /**
-     * Source code
+     * Signal that the current {@linkcode ResolveHook} intends to terminate the
+     * chain of resolve `hooks`.
+     *
+     * @default false
      */
-    source?: ArrayBuffer | Buffer | string | undefined
+    shortCircuit?: boolean | undefined
+
+    /**
+     * Source code for Node.js to evaluate.
+     */
+    source?: ArrayBuffer | TypedArray | string | undefined
   }
 
   /**
-   * Valid module formats.
-   */
-  declare type LoaderHookFormat =
-    | 'builtin'
-    | 'commonjs'
-    | 'dynamic'
-    | 'json'
-    | 'module'
-    | 'wasm'
-
-  /**
-   * Returns the resolved file URL for `specifier` and `context.parentURL` and,
-   * optionally, its format as a hint to {@link LoadHook}.
+   * Determines how `url` should be interpreted, retrieved, and parsed.
    *
-   * @see https://nodejs.org/docs/latest-v16.x/api/all.html#all_esm_resolvespecifier-context-defaultresolve
+   * @see {@linkcode LoadHookContext}
+   * @see https://nodejs.org/docs/latest-v16.x/api/esm.html#loadurl-context-nextload
    *
    * @async
    *
-   * @param {string} specifier - Module specifier
-   * @param {ResolveHookContext} context - Hook context
-   * @param {string[]} context.conditions - Import conditions
-   * @param {ImportAssertions} context.importAssertions - Import assertions map
-   * @param {string} [context.parentURL] - `file:` url of importer
-   * @param {ResolveHook} defaultResolve - Node.js default resolver
-   * @return {Promise<ResolveHookResult>} Hook result
+   * @param {string} url - Module URL
+   * @param {LoadHookContext} context - Hook context
+   * @param {LoadHook} nextLoad - Subsequent `load` hook in the chain or default
+   * Node.js `load` hook after last user-supplied `load` hook
+   * @return {Promise<LoadHookResult>} Hook result
    */
-  declare type ResolveHook = (
-    specifier: string,
-    context: ResolveHookContext,
-    defaultResolve: ResolveHook
-  ) => Promise<ResolveHookResult>
+  declare type LoadHook = (
+    url: string,
+    context: LoadHookContext,
+    defaultLoad: LoadHook
+  ) => Promise<LoadHookResult>
 
   /**
    * {@link ResolveHook} context.
    */
   declare interface ResolveHookContext {
     /**
-     * Import conditions.
+     * Export conditions of relevant `package.json`.
      */
-    conditions: LoaderHookFormat | null
+    conditions: string[]
 
     /**
      * Import assertions map.
@@ -98,9 +80,10 @@ declare global {
     importAssertions: ImportAssertions
 
     /**
-     * `file:` url of importer.
+     * URL of module importing the specifier to be resolved, or `undefined` if
+     * the module specifier is the Node.js entry point.
      */
-    parentURL?: string
+    parentURL?: string | undefined
   }
 
   /**
@@ -108,18 +91,44 @@ declare global {
    */
   declare interface ResolveHookResult {
     /**
-     * Module format.
+     * Module format hint for {@linkcode LoadHook}.
+     *
+     * **Note**: Hint may be ignored.
      */
-    format?: LoaderHookFormat | null
+    format?: Nullable<Format | Lowercase<keyof typeof Format>> | undefined
 
     /**
-     * Absolute url to import target.
+     * Signal that the current {@linkcode ResolveHook} intends to terminate the
+     * chain of resolve `hooks`.
      *
-     * @example
-     *  'file://...'
+     * @default false
+     */
+    shortCircuit?: boolean | undefined
+
+    /**
+     * Absolute URL to which module specifier resolved to.
      */
     url: string
   }
-}
 
-export {}
+  /**
+   * Resolves a file URL for a given module specifier and parent URL, and
+   * optionally its format (such as `'module'`) as a hint to the `load` hook.
+   *
+   * @see {@linkcode ResolveHookContext}
+   * @see https://nodejs.org/docs/latest-v16.x/api/esm.html#resolvespecifier-context-nextresolve
+   *
+   * @async
+   *
+   * @param {string} specifier - Module specifier
+   * @param {ResolveHookContext} context - Hook context
+   * @param {ResolveHook} nextResolve - Subsequent `resolve` hook in the chain
+   * or default Node.js `resolve` hook after last user-supplied `resolve` hook
+   * @return {Promise<ResolveHookResult>} Hook result
+   */
+  declare type ResolveHook = (
+    specifier: string,
+    context: ResolveHookContext,
+    nextResolve: ResolveHook
+  ) => Promise<ResolveHookResult>
+}
