@@ -19,6 +19,7 @@
 - [Use](#use)
 - [API](#api)
 - [Types](#types)
+- [Related](#related)
 - [Contribute](#contribute)
 
 ## What is this?
@@ -242,6 +243,10 @@ Static `import` statement regex. Ignores matches in comments.
 
 This package is fully typed with [TypeScript][5].
 
+## Related
+
+- [`export-regex`][6] &mdash; `export` statement regex
+
 ## Contribute
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md).
@@ -251,3 +256,4 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 [3]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 [4]: https://javascript.info/regexp-unicode
 [5]: https://www.typescriptlang.org
+[6]: https://github.com/flex-development/export-regex
