@@ -72,7 +72,7 @@
     "typecheck:watch": "vitest typecheck"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.4.2",
+    "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.2",
     "@flex-development/mkbuild": "1.0.0-alpha.13",
     "@flex-development/mlly": "1.0.0-alpha.11",
