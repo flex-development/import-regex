@@ -1,5 +1,5 @@
 /**
- * @file Changelog Configuration
+ * @file Configuration - Changelog
  * @module config/changelog
  * @see https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-conventionalcommits
  * @see https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-core
@@ -8,6 +8,7 @@
  * @see https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/git-raw-commits
  */
 
+import pathe from '@flex-development/pathe'
 import { CompareResult, isNIL } from '@flex-development/tutils'
 import addStream from 'add-stream'
 import conventionalChangelog from 'conventional-changelog'
@@ -26,12 +27,11 @@ import {
   type ReadStream,
   type WriteStream
 } from 'node:fs'
-import path from 'node:path'
 import type { Readable } from 'node:stream'
 import sade from 'sade'
 import semver from 'semver'
 import tempfile from 'tempfile'
-import pkg from './package.json' assert { type: 'json' }
+import pkg from '../package.json' assert { type: 'json' }
 
 /**
  * CLI flags.
@@ -146,7 +146,7 @@ sade('changelog', true)
             : typeof outputUnreleased === 'string'
             ? !!outputUnreleased.trim()
             : false,
-        pkg: { path: path.resolve('package.json') },
+        pkg: { path: pathe.resolve('package.json') },
         // @ts-expect-error ts(2322)
         preset: {
           header: '',
@@ -317,7 +317,8 @@ sade('changelog', true)
 
           // set release date
           context.date =
-            key?.committerDate ?? dateformat(new Date(), 'yyyy-mm-dd', true)
+            key?.committerDate ??
+            dateformat(new Date().toLocaleDateString(), 'yyyy-mm-dd', true)
 
           // determine patch release state
           if (version && semver.valid(version)) {
@@ -333,7 +334,10 @@ sade('changelog', true)
             repoUrl: pkg.repository.slice(0, -4)
           }
         },
-        headerPartial: readFileSync('templates/changelog/header.hbs', 'utf8'),
+        headerPartial: readFileSync(
+          'config/templates/changelog/header.hbs',
+          'utf8'
+        ),
         ignoreReverted: false
       }
     ).on('error', err => console.error(err.stack))
