@@ -181,6 +181,7 @@
     "yaml"
   ],
   "files.associations": {
+    "*.log": "log",
     "*.snap": "jest-snapshot",
     ".env.zsh": "shellscript",
     ".markdownlintignore": "ignore",
@@ -310,7 +311,7 @@
       "icon": "graphql"
     },
     {
-      "extensions": ["build.json", "typecheck.json"],
+      "extensions": ["build.json", "cjs.json", "typecheck.json"],
       "format": "svg",
       "icon": "tsconfig"
     },

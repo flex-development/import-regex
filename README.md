@@ -60,7 +60,7 @@ yarn add @flex-development/import-regex@flex-development/import-regex
 
 Suppose we have the following module:
 
-```typescript
+```ts
 import * as regexp from '@flex-development/import-regex'
 import { omit } from 'radash'
 import { dedent } from 'ts-dedent'
