@@ -1159,16 +1159,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flex-development/commitlint-config@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@flex-development/commitlint-config@npm:1.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fcommitlint-config%2F1.0.0%2Fda1793aae5c47f38528f0bcc03197e581f472de3"
+"@flex-development/commitlint-config@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@flex-development/commitlint-config@npm:1.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fcommitlint-config%2F1.0.1%2F802e285802fe8188c2f02f68114ca31a20b6eb6d"
   dependencies:
     "@commitlint/types": "npm:17.4.4"
     "@flex-development/tutils": "npm:6.0.0-alpha.10"
     "@types/conventional-commits-parser": "npm:3.0.3"
     consola: "npm:2.15.3"
     conventional-changelog-conventionalcommits: "npm:5.0.0"
-  checksum: 09f4f410c7bf7d4ae90c0524b73b75545263ffce593278d9c8e00e04f152e44b48e7d76a68cf88fdc6d2d9f6fd1d8a935be88cdcc4c9521764ef2a9b6b1df474
+  checksum: 2a6e2cc628c7f40e2bb410cb016edc7466fac445d0f9d3753fbce8c7c5e04706e8b59e5aa470db4dc468d27785ba44ada9a06c2ce84dd8193db6632ff5ba9146
   languageName: node
   linkType: hard
 
@@ -1233,7 +1233,7 @@ __metadata:
   resolution: "@flex-development/import-regex@workspace:."
   dependencies:
     "@commitlint/cli": "npm:17.4.4"
-    "@flex-development/commitlint-config": "npm:1.0.0"
+    "@flex-development/commitlint-config": "npm:1.0.1"
     "@flex-development/mkbuild": "npm:1.0.0-alpha.14"
     "@flex-development/mlly": "npm:1.0.0-alpha.13"
     "@flex-development/pathe": "npm:1.0.3"
