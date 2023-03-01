@@ -252,6 +252,68 @@ exports[`unit:STATIC_IMPORT_REGEX > namespace imports > should match namespace i
 }
 `;
 
+exports[`unit:STATIC_IMPORT_REGEX > nested imports > should match nested import statement(s) in declaration file 1`] = `
+[
+  {
+    "0": "import type { Format } from '@flex-development/mlly'",
+    "1": "type",
+    "2": "{ Format }",
+    "3": "@flex-development/mlly",
+    "4": undefined,
+    "groups": {
+      "assertion": undefined,
+      "imports": "{ Format }",
+      "specifier": "@flex-development/mlly",
+      "type": "type",
+    },
+  },
+  {
+    "0": "import type { Nullable, TypedArray } from '@flex-development/tutils'",
+    "1": "type",
+    "2": "{ Nullable, TypedArray }",
+    "3": "@flex-development/tutils",
+    "4": undefined,
+    "groups": {
+      "assertion": undefined,
+      "imports": "{ Nullable, TypedArray }",
+      "specifier": "@flex-development/tutils",
+      "type": "type",
+    },
+  },
+  {
+    "0": "import type {
+    BuildOptions,
+    BuildResult,
+    OutputFile,
+    Plugin,
+    PluginBuild
+  } from 'esbuild'",
+    "1": "type",
+    "2": "{
+    BuildOptions,
+    BuildResult,
+    OutputFile,
+    Plugin,
+    PluginBuild
+  }",
+    "3": "esbuild",
+    "4": undefined,
+    "groups": {
+      "assertion": undefined,
+      "imports": "{
+    BuildOptions,
+    BuildResult,
+    OutputFile,
+    Plugin,
+    PluginBuild
+  }",
+      "specifier": "esbuild",
+      "type": "type",
+    },
+  },
+]
+`;
+
 exports[`unit:STATIC_IMPORT_REGEX > side-effect imports > should match side-effect import 1`] = `
 {
   "0": "import \\"./polyfill.mjs\\"",

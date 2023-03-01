@@ -12,24 +12,46 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
     TEST_SUBJECT.lastIndex = 0
   })
 
-  describe('comments', () => {
-    it('should ignore import in multi-line comment', () => {
-      // Arrange
-      const code = dedent`
-        /**
-         * @example
-         *  import write from './utils/write'
-         *	await write(result, fs)
-         */
-      `
+  it('should ignore match in multi-line comment', () => {
+    // Arrange
+    const code = dedent`
+      /**
+       * @example
+       *  import write from './utils/write'
+       *	await write(result, fs)
+       */
+    `
 
-      // Act + Expect
-      expect(TEST_SUBJECT.test(code)).to.be.false
-    })
+    // Act + Expect
+    expect(TEST_SUBJECT.test(code)).to.be.false
+  })
 
-    it('should ignore import in single-line comment', () => {
-      expect(TEST_SUBJECT.test("// import fse from 'fs-extra'")).to.be.false
-    })
+  it('should ignore match in single-line comment', () => {
+    expect(TEST_SUBJECT.test("// import fse from 'fs-extra'")).to.be.false
+  })
+
+  it('should ignore match in string literal', () => {
+    // Arrange
+    const code = dedent`
+      const ERR_UNSUPPORTED_DIR_IMPORT: NodeErrorConstructor<
+        ErrorConstructor,
+        [string, string]
+      > = createNodeError(
+        ErrorCode.ERR_UNSUPPORTED_DIR_IMPORT,
+        Error,
+        "Directory import '%s' is not supported resolving ES modules imported from %s"
+      )
+
+      const text: string = await resolveModules(output.text, {
+        conditions: [format === 'esm' ? 'import' : 'require'],
+        ext: ext as Ext,
+        extensions,
+        parent
+      })
+    `
+
+    // Act + Expect
+    expect(TEST_SUBJECT.test(code)).to.be.false
   })
 
   describe('default imports', () => {
@@ -189,6 +211,32 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
       // Expect
       expect(result).to.not.be.null
       expect(result).toMatchSnapshot()
+    })
+  })
+
+  describe('nested imports', () => {
+    it('should match nested import statement(s) in declaration file', () => {
+      // Arrange
+      const code = dedent`
+        declare module 'loader' {
+          import type { Format } from '@flex-development/mlly'
+          import type { Nullable, TypedArray } from '@flex-development/tutils'
+          import type {
+            BuildOptions,
+            BuildResult,
+            OutputFile,
+            Plugin,
+            PluginBuild
+          } from 'esbuild'
+        }
+      `
+
+      // Act
+      const result = [...code.matchAll(TEST_SUBJECT)]
+
+      // Expect
+      expect(result).to.not.be.empty
+      expect(result.map(res => omit(res, ['index', 'input']))).toMatchSnapshot()
     })
   })
 
