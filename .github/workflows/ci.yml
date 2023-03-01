@@ -131,7 +131,9 @@ jobs:
           GITHUB_PUSH_BASE_SHA: ${{ github.event.base }}
           GITHUB_PUSH_BEFORE_SHA: ${{ github.event.before }}
   format:
-    needs: commitlint
+    needs:
+      - commitlint
+      - gitguardian
     runs-on: ubuntu-latest
     steps:
       - id: checkout
@@ -156,7 +158,9 @@ jobs:
         name: Check code formatting
         run: yarn check:format
   lint:
-    needs: commitlint
+    needs:
+      - commitlint
+      - gitguardian
     runs-on: ubuntu-latest
     steps:
       - id: checkout
@@ -181,7 +185,9 @@ jobs:
         name: Check lint status
         run: yarn check:lint
   spelling:
-    needs: commitlint
+    needs:
+      - commitlint
+      - gitguardian
     runs-on: ubuntu-latest
     steps:
       - id: checkout
@@ -208,6 +214,7 @@ jobs:
   typescript:
     needs:
       - commitlint
+      - gitguardian
       - metadata
     runs-on: ubuntu-latest
     strategy:
@@ -252,7 +259,9 @@ jobs:
         name: Run typecheck
         run: yarn typecheck
   test:
-    needs: commitlint
+    needs:
+      - commitlint
+      - gitguardian
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -307,6 +316,7 @@ jobs:
   build:
     needs:
       - commitlint
+      - gitguardian
       - metadata
     runs-on: ubuntu-latest
     steps:
