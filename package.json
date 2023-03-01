@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/import-regex",
   "description": "Import statement regex",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "keywords": [
     "dynamic",
     "ecmascript",
