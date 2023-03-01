@@ -39,7 +39,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match default import with import assertion', () => {
@@ -51,7 +51,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match default import with named imports', () => {
@@ -60,7 +60,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match default import with namespace imports', () => {
@@ -72,7 +72,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match default type import', () => {
@@ -81,7 +81,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 
@@ -106,7 +106,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named import(s) in single-line statement', () => {
@@ -118,7 +118,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named import(s) with renamed identifiers', () => {
@@ -130,7 +130,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named import(s) with renamed string literals', () => {
@@ -145,7 +145,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.empty
-      expect(result.map(res => omit(res, ['input']))).toMatchSnapshot()
+      expect(result.map(res => omit(res, ['index', 'input']))).toMatchSnapshot()
     })
 
     it('should match named type import(s) in multi-line statement', () => {
@@ -165,7 +165,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named type import(s) in single-line statement', () => {
@@ -177,7 +177,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 
@@ -188,7 +188,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 
@@ -199,7 +199,7 @@ describe('unit:STATIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 })

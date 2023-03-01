@@ -47,7 +47,7 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 
@@ -65,7 +65,7 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match import with variable as specifier', () => {
@@ -77,7 +77,7 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 
@@ -95,7 +95,7 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 
@@ -120,7 +120,7 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named import(s) in single-line statement', () => {
@@ -132,7 +132,7 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named import(s) with renamed identifiers', () => {
@@ -154,7 +154,7 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named import(s) with renamed string literals', () => {
@@ -169,7 +169,7 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.empty
-      expect(result.map(res => omit(res, ['input']))).toMatchSnapshot()
+      expect(result.map(res => omit(res, ['index', 'input']))).toMatchSnapshot()
     })
   })
 
@@ -183,7 +183,7 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 
@@ -197,7 +197,7 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 
@@ -227,7 +227,7 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 })
