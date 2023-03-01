@@ -12,23 +12,32 @@ describe('unit:DYNAMIC_IMPORT_REGEX', () => {
     TEST_SUBJECT.lastIndex = 0
   })
 
-  describe('comments', () => {
-    it('should ignore import in multi-line comment', () => {
-      // Arrange
-      const code = dedent`
-        /**
-         * @example
-         *  const { readPackage } = await import('read-pkg')
-         */
-      `
+  it('should ignore match in multi-line comment', () => {
+    // Arrange
+    const code = dedent`
+      /**
+       * @example
+       *  const { readPackage } = await import('read-pkg')
+       */
+    `
 
-      // Act + Expect
-      expect(TEST_SUBJECT.test(code)).to.be.false
-    })
+    // Act + Expect
+    expect(TEST_SUBJECT.test(code)).to.be.false
+  })
 
-    it('should ignore import in single-line comment', () => {
-      expect(TEST_SUBJECT.test('// await import("./init.mjs")')).to.be.false
-    })
+  it('should ignore match in single-line comment', () => {
+    expect(TEST_SUBJECT.test('// await import("./init.mjs")')).to.be.false
+  })
+
+  it('should ignore match in string literal', () => {
+    // Arrange
+    const code = dedent`
+      const str1 = 'await import("foo")'
+      const str2 = "await import('foo')"
+    `
+
+    // Act + Expect
+    expect(TEST_SUBJECT.test(code)).to.be.false
   })
 
   describe('conditional imports', () => {
