@@ -30,7 +30,8 @@
     "outDir": "../../../dist",
     "paths": {
       "#src": ["src/index"],
-      "#src/*": ["src/*"]
+      "#src/*": ["src/*"],
+      "#tests/*": ["__tests__/*"]
     },
     "preserveConstEnums": true,
     "preserveSymlinks": false,
