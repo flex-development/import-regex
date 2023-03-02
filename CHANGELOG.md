@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/flex-development/import-regex/compare/2.0.2...2.0.3) (2023-03-02)
+
+
+### :bug: Fixes
+
+* **regex:** [static] allow spaces after semicolons ([c23a1c5](https://github.com/flex-development/import-regex/commit/c23a1c5f880ad34959ab2e9b35d7ebe399e43e20))
+
 ## [2.0.2](https://github.com/flex-development/import-regex/compare/2.0.1...2.0.2) (2023-03-01)
 
 
