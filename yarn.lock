@@ -1210,6 +1210,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@flex-development/export-regex@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@flex-development/export-regex@npm:1.0.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fexport-regex%2F1.0.2%2F9f8b8a1ca3fd1f2e259f9da14d4750f79622ee43"
+  checksum: ddc4f5d62604d45c8bfaa703c5453980f16fac17b31b4f383f2cb385003cfcefef3f847952302209d54272fc366332e6d4cbb063689b60ff3cc09b8055c47867
+  languageName: node
+  linkType: hard
+
 "@flex-development/ext-regex@npm:1.0.0":
   version: 1.0.0
   resolution: "@flex-development/ext-regex@npm:1.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fext-regex%2F1.0.0%2Fe1729f6d8dfd8e62423acbdf6a7c341e5436568b"
@@ -1228,6 +1235,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@flex-development/import-regex@npm:2.0.3":
+  version: 2.0.3
+  resolution: "@flex-development/import-regex@npm:2.0.3::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fimport-regex%2F2.0.3%2Fc6f01b00c68004a7d39a562b87e52b4c35db4d49"
+  checksum: 44a2f815a0cd1495474651ee8c56fdd3e201eaacc1a32aae790e5c6e86adba0fef9be7063e06db2918e077bf9412d810b63eb5d0e907dd9c2dd4e4bb75a51601
+  languageName: node
+  linkType: hard
+
 "@flex-development/import-regex@workspace:.":
   version: 0.0.0-use.local
   resolution: "@flex-development/import-regex@workspace:."
@@ -1235,7 +1249,7 @@ __metadata:
     "@commitlint/cli": "npm:17.4.4"
     "@flex-development/commitlint-config": "npm:1.0.1"
     "@flex-development/mkbuild": "npm:1.0.0-alpha.14"
-    "@flex-development/mlly": "npm:1.0.0-alpha.13"
+    "@flex-development/mlly": "npm:1.0.0-alpha.15"
     "@flex-development/pathe": "npm:1.0.3"
     "@flex-development/tutils": "npm:6.0.0-alpha.10"
     "@graphql-eslint/eslint-plugin": "npm:3.16.1"
@@ -1365,6 +1379,24 @@ __metadata:
     "@types/node": ">=14.17.0"
     node-fetch: ">=3.3.0"
   checksum: 1f0b0790db39a4cebbccce7ee621ddb587b7fb35d4c58945793b7c271946f0bcf0163ef88f46380c825f62550cc542790e910dfc5541c1c0365971a8491e8dd7
+  languageName: node
+  linkType: hard
+
+"@flex-development/mlly@npm:1.0.0-alpha.15":
+  version: 1.0.0-alpha.15
+  resolution: "@flex-development/mlly@npm:1.0.0-alpha.15::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fmlly%2F1.0.0-alpha.15%2Fd4b18cf2f07b10873bdfec41513707a2801042c9"
+  dependencies:
+    "@flex-development/errnode": "npm:1.5.0"
+    "@flex-development/export-regex": "npm:1.0.2"
+    "@flex-development/import-regex": "npm:2.0.3"
+    "@flex-development/is-builtin": "npm:2.0.0"
+    "@flex-development/pathe": "npm:1.0.3"
+    "@flex-development/pkg-types": "npm:2.0.0"
+    "@flex-development/tutils": "npm:6.0.0-alpha.10"
+  peerDependencies:
+    "@types/node": ">=14.17.0"
+    node-fetch: ">=3.3.0"
+  checksum: df89ac508a61f13c8f5adb8f867c8e8a57f4f52d558b7287b3c11683cbd85babdb221fe505a536205e516f9151226309bcf5995901b4cbb3b19e87e057148a38
   languageName: node
   linkType: hard
 
