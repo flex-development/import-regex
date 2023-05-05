@@ -198,12 +198,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:17.5.1":
-  version: 17.5.1
-  resolution: "@commitlint/cli@npm:17.5.1"
+"@commitlint/cli@npm:17.6.3":
+  version: 17.6.3
+  resolution: "@commitlint/cli@npm:17.6.3"
   dependencies:
     "@commitlint/format": "npm:^17.4.4"
-    "@commitlint/lint": "npm:^17.4.4"
+    "@commitlint/lint": "npm:^17.6.3"
     "@commitlint/load": "npm:^17.5.0"
     "@commitlint/read": "npm:^17.5.1"
     "@commitlint/types": "npm:^17.4.4"
@@ -214,7 +214,7 @@ __metadata:
     yargs: "npm:^17.0.0"
   bin:
     commitlint: cli.js
-  checksum: b5806776b8a36f7b4d4ab4c2a9f71afaaa27b6506e1b91bf5e816e63d34a8d9c2198d0842759a89ef8677fe324aa5961cb74938660a18233b60adeb01d3c19e6
+  checksum: 118e13847416ff9ccced022a81d17019ac7d370cd572ecdbfd76e9d96664b7f898a48b179f48d0d8a2290c82fe583950fa7a4d93b2398e6d7b6fe37b647879a9
   languageName: node
   linkType: hard
 
@@ -259,25 +259,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/is-ignored@npm:^17.4.4":
-  version: 17.4.4
-  resolution: "@commitlint/is-ignored@npm:17.4.4"
+"@commitlint/is-ignored@npm:^17.6.3":
+  version: 17.6.3
+  resolution: "@commitlint/is-ignored@npm:17.6.3"
   dependencies:
     "@commitlint/types": "npm:^17.4.4"
-    semver: "npm:7.3.8"
-  checksum: a55a0c55242dc447f07c64995a067db19848fc1198965b360d0cb6d23816c8cb9cfcb1376744fbc8e47ae86cc8359387f1aae1dd50c5c4454c3fb7b67c0a8fda
+    semver: "npm:7.5.0"
+  checksum: a7267396d64d10ded862145732a82b730906ea746da6ee22a355c0bd25e197ad15ce1d8ff065b4d5eda9d4e42a484c53b963963dffe74d807af4871f38193dc5
   languageName: node
   linkType: hard
 
-"@commitlint/lint@npm:^17.4.4":
-  version: 17.4.4
-  resolution: "@commitlint/lint@npm:17.4.4"
+"@commitlint/lint@npm:^17.6.3":
+  version: 17.6.3
+  resolution: "@commitlint/lint@npm:17.6.3"
   dependencies:
-    "@commitlint/is-ignored": "npm:^17.4.4"
+    "@commitlint/is-ignored": "npm:^17.6.3"
     "@commitlint/parse": "npm:^17.4.4"
-    "@commitlint/rules": "npm:^17.4.4"
+    "@commitlint/rules": "npm:^17.6.1"
     "@commitlint/types": "npm:^17.4.4"
-  checksum: 03895636269249bee2d3dac7f825a2dfc7e400f49e14eec2cae35aa6056e479bd6a9ec788bccdb57561f7e76dfc6c9fcae0407939ab3013302b443f499103462
+  checksum: 6ba065cf07b925b9203bf2ca2ff5a96c38d485f5271044a3db73e737483c7f568996cfcaeaaf963cd86fb39c93d9e49f64223b71e48d623a633ec47a511e5647
   languageName: node
   linkType: hard
 
@@ -348,16 +348,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/rules@npm:^17.4.4":
-  version: 17.4.4
-  resolution: "@commitlint/rules@npm:17.4.4"
+"@commitlint/rules@npm:^17.6.1":
+  version: 17.6.1
+  resolution: "@commitlint/rules@npm:17.6.1"
   dependencies:
     "@commitlint/ensure": "npm:^17.4.4"
     "@commitlint/message": "npm:^17.4.2"
     "@commitlint/to-lines": "npm:^17.4.0"
     "@commitlint/types": "npm:^17.4.4"
     execa: "npm:^5.0.0"
-  checksum: 49ea76836a4b66c882398c2d1f02d8657e156295ee290c285229794b4fb709950e7e7c3f90a4c464270226b78f789982aa3a712594dae773b9795a0b4ad10e83
+  checksum: 7e7c552fa925d39144ec48c4cd5f32580d23cb3bbac92d0776d5096a48bb26c3a956e99f1088b7d026a61e61c76cbb5fb3ce97d6367bad501401f716c0fd24ed
   languageName: node
   linkType: hard
 
@@ -1120,7 +1120,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@flex-development/import-regex@workspace:."
   dependencies:
-    "@commitlint/cli": "npm:17.5.1"
+    "@commitlint/cli": "npm:17.6.3"
     "@flex-development/commitlint-config": "npm:1.0.1"
     "@flex-development/decorator-regex": "npm:1.0.0"
     "@flex-development/esm-types": "npm:1.0.0"
@@ -7757,17 +7757,6 @@ __metadata:
   bin:
     semver: ./bin/semver
   checksum: e1d12140b695aeb8917978d134ff3f8fee33489a5eaf6b217111ab0b14cbf45f36753d510db4dfbdc5a6f304e053ff1a4995c5498e9734ad9bf98182e4f39704
-  languageName: node
-  linkType: hard
-
-"semver@npm:7.3.8":
-  version: 7.3.8
-  resolution: "semver@npm:7.3.8"
-  dependencies:
-    lru-cache: "npm:^6.0.0"
-  bin:
-    semver: bin/semver.js
-  checksum: 94ad80ee14889020cb4a14d809fb99d16cbf4ff3dc7f4c564fc72efe2c5763a60090a1c16a9fd18ceeb1e993a1303a4d870c0a22f26adaf435b368b46a7d8462
   languageName: node
   linkType: hard
 
