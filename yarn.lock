@@ -5445,16 +5445,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-builtin-module@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "is-builtin-module@npm:3.2.0"
-  dependencies:
-    builtin-modules: "npm:^3.3.0"
-  checksum: 5b26848b69b4bfe4d78599fe5ffc60257c039c0908d7e491f1680c7a1f2d74e74e3ce86f44ea772f788a6e49cc4645f47029d0a8136a5281bf10652d2e1fbb1d
-  languageName: node
-  linkType: hard
-
-"is-builtin-module@npm:^3.2.1":
+"is-builtin-module@npm:^3.2.0, is-builtin-module@npm:^3.2.1":
   version: 3.2.1
   resolution: "is-builtin-module@npm:3.2.1"
   dependencies:
@@ -7789,7 +7780,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:7.5.2, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.3.8":
+"semver@npm:7.5.2":
   version: 7.5.2
   resolution: "semver@npm:7.5.2"
   dependencies:
@@ -7809,7 +7800,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.5.1":
+"semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.3.8, semver@npm:^7.5.1":
   version: 7.5.3
   resolution: "semver@npm:7.5.3"
   dependencies:
