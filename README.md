@@ -63,7 +63,7 @@ Suppose we have the following module:
 
 ```ts
 import * as regexp from '@flex-development/import-regex'
-import { omit } from 'radash'
+import { omit } from '@flex-development/tutils'
 import { dedent } from 'ts-dedent'
 
 const code: string = dedent`
