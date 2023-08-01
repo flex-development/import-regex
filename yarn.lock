@@ -1204,7 +1204,6 @@ __metadata:
     conventional-changelog-conventionalcommits: "npm:5.0.0"
     conventional-changelog-core: "npm:4.2.4"
     conventional-changelog-writer: "npm:5.0.1"
-    conventional-commits-parser: "npm:3.2.4"
     conventional-recommended-bump: "npm:6.1.0"
     cross-env: "npm:7.0.3"
     cspell: "npm:6.31.2"
@@ -3833,7 +3832,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-commits-parser@npm:3.2.4, conventional-commits-parser@npm:^3.2.0, conventional-commits-parser@npm:^3.2.2":
+"conventional-commits-parser@npm:^3.2.0, conventional-commits-parser@npm:^3.2.2":
   version: 3.2.4
   resolution: "conventional-commits-parser@npm:3.2.4"
   dependencies:
