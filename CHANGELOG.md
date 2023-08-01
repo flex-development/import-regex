@@ -1,3 +1,91 @@
+## [3.0.0](https://github.com/flex-development/import-regex/compare/2.0.3...3.0.0) (2023-07-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* **nvm:** require `>=16.20.0`
+
+### :package: Build
+
+* **deps-dev:** Bump @commitlint/cli from 17.5.1 to 17.6.3 ([#172](https://github.com/flex-development/import-regex/issues/172)) ([cbdefc6](https://github.com/flex-development/import-regex/commit/cbdefc66515083386a89761d2687e3fd2bf877c2))
+* **deps-dev:** Bump @flex-development/esm-types from 1.0.0 to 2.0.0 ([#242](https://github.com/flex-development/import-regex/issues/242)) ([2c6371e](https://github.com/flex-development/import-regex/commit/2c6371e440b37cbec51d6acb893fcc352c23d4fb))
+* **deps-dev:** Bump @flex-development/mlly from 1.0.0-alpha.13 to 1.0.0-alpha.15 ([#100](https://github.com/flex-development/import-regex/issues/100)) ([9faeb27](https://github.com/flex-development/import-regex/commit/9faeb27133adfecffe4ca5d84bf12345f54655f4))
+* **deps-dev:** Bump @flex-development/pathe from 1.0.3 to 2.0.0 ([#241](https://github.com/flex-development/import-regex/issues/241)) ([4187f6e](https://github.com/flex-development/import-regex/commit/4187f6ee6c58f50ed8bbee674f6561e4be8d04b0))
+* **deps-dev:** Bump @graphql-eslint/eslint-plugin from 3.18.0 to 3.19.1 ([#199](https://github.com/flex-development/import-regex/issues/199)) ([fe6c45d](https://github.com/flex-development/import-regex/commit/fe6c45d3acf4a78d3050009bd8d3d94f7928d9f6))
+* **deps-dev:** Bump @typescript-eslint/eslint-plugin from 5.54.0 to 5.54.1 ([#103](https://github.com/flex-development/import-regex/issues/103)) ([a903c0f](https://github.com/flex-development/import-regex/commit/a903c0fa1bc2abe57330e3f10df68a082484c717))
+* **deps-dev:** Bump @typescript-eslint/eslint-plugin from 5.58.0 to 5.59.5 ([#186](https://github.com/flex-development/import-regex/issues/186)) ([79b5795](https://github.com/flex-development/import-regex/commit/79b5795e7caf00bb0865a402ee17677d698c33a2))
+* **deps-dev:** Bump @typescript-eslint/eslint-plugin from 5.59.5 to 5.59.8 ([#206](https://github.com/flex-development/import-regex/issues/206)) ([2e13aaf](https://github.com/flex-development/import-regex/commit/2e13aafe8f84a5ccf28961a942d8b9060eab9c75))
+* **deps-dev:** Bump @typescript-eslint/parser from 5.58.0 to 5.59.2 ([#170](https://github.com/flex-development/import-regex/issues/170)) ([8a53785](https://github.com/flex-development/import-regex/commit/8a5378501fba2ab059f6ff34dc37e3daa23abc0a))
+* **deps-dev:** Bump @typescript-eslint/parser from 5.59.2 to 5.59.5 ([#184](https://github.com/flex-development/import-regex/issues/184)) ([6a1042a](https://github.com/flex-development/import-regex/commit/6a1042aec84112fb39b644345a2c77549b8d72d7))
+* **deps-dev:** Bump @typescript-eslint/parser from 5.59.5 to 5.59.7 ([#196](https://github.com/flex-development/import-regex/issues/196)) ([0720295](https://github.com/flex-development/import-regex/commit/0720295f4b4914952e3cc90338e4a778a0486ed0))
+* **deps-dev:** Bump @vitest/coverage-c8 from 0.30.0 to 0.31.0 ([#166](https://github.com/flex-development/import-regex/issues/166)) ([10bfdb4](https://github.com/flex-development/import-regex/commit/10bfdb423892936f202f2d470f050464e13c5b1d))
+* **deps-dev:** Bump @vitest/ui from 0.30.0 to 0.31.0 ([#165](https://github.com/flex-development/import-regex/issues/165)) ([5c58b42](https://github.com/flex-development/import-regex/commit/5c58b42be2d9bc1fb06a9a5874ff29afe1471fe4))
+* **deps-dev:** Bump cspell from 6.27.0 to 6.30.2 ([#122](https://github.com/flex-development/import-regex/issues/122)) ([469b61c](https://github.com/flex-development/import-regex/commit/469b61ca8bc695934503f6f80b6625201d411de8))
+* **deps-dev:** Bump esbuild from 0.17.10 to 0.17.11 ([#97](https://github.com/flex-development/import-regex/issues/97)) ([7ba80ff](https://github.com/flex-development/import-regex/commit/7ba80ff308754cc610ff5107cd72ac319bbf7227))
+* **deps-dev:** Bump esbuild from 0.17.16 to 0.17.18 ([#168](https://github.com/flex-development/import-regex/issues/168)) ([3878d83](https://github.com/flex-development/import-regex/commit/3878d833247621ac325f2237e5e5b8fa9416c891))
+* **deps-dev:** Bump esbuild from 0.17.18 to 0.17.19 ([#189](https://github.com/flex-development/import-regex/issues/189)) ([dab52d3](https://github.com/flex-development/import-regex/commit/dab52d3a0e2f66f7b861fafd70a38952bc8da281))
+* **deps-dev:** Bump eslint-config-prettier from 8.6.0 to 8.7.0 ([#104](https://github.com/flex-development/import-regex/issues/104)) ([0d656c1](https://github.com/flex-development/import-regex/commit/0d656c1f279744d5dec175c4068fce05bbcd4a0e))
+* **deps-dev:** Bump eslint-plugin-jsdoc from 40.0.0 to 40.0.1 ([#96](https://github.com/flex-development/import-regex/issues/96)) ([b801e74](https://github.com/flex-development/import-regex/commit/b801e74709f9c4cdda00c3581e73ba3e769d61b7))
+* **deps-dev:** Bump eslint-plugin-jsdoc from 40.2.0 to 40.3.0 ([#150](https://github.com/flex-development/import-regex/issues/150)) ([5b381ca](https://github.com/flex-development/import-regex/commit/5b381cae6bddc220f70f3f3e540c7056dc91e678))
+* **deps-dev:** Bump eslint-plugin-jsonc from 2.7.0 to 2.8.0 ([#190](https://github.com/flex-development/import-regex/issues/190)) ([6da8495](https://github.com/flex-development/import-regex/commit/6da8495a708d79936865ac7a70d2f9f5b537252b))
+* **deps-dev:** Bump eslint-plugin-markdownlint from 0.4.0 to 0.4.1 ([#107](https://github.com/flex-development/import-regex/issues/107)) ([6cc8eda](https://github.com/flex-development/import-regex/commit/6cc8eda897f5bf26e20eea9e83a58c5554258940))
+* **deps-dev:** Bump eslint-plugin-yml from 1.5.0 to 1.7.0 ([#187](https://github.com/flex-development/import-regex/issues/187)) ([b8c8ed1](https://github.com/flex-development/import-regex/commit/b8c8ed138961ce527bb18ca3e44445641f3ebab1))
+* **deps-dev:** Bump jsonc-eslint-parser from 2.2.0 to 2.3.0 ([#194](https://github.com/flex-development/import-regex/issues/194)) ([84b6df7](https://github.com/flex-development/import-regex/commit/84b6df70a798d84ff28a8cfb4f9481a151b3cedd))
+* **deps-dev:** Bump lint-staged from 13.2.1 to 13.2.2 ([#181](https://github.com/flex-development/import-regex/issues/181)) ([7954f1f](https://github.com/flex-development/import-regex/commit/7954f1f0b7d88d18b3cebbc7c192bd4010682211))
+* **deps-dev:** Bump prettier from 2.8.7 to 2.8.8 ([#183](https://github.com/flex-development/import-regex/issues/183)) ([a6b64a8](https://github.com/flex-development/import-regex/commit/a6b64a8adca68a3d5b9b12e7f56eecf31219bc12))
+* **deps-dev:** Bump semver from 7.3.8 to 7.4.0 ([#149](https://github.com/flex-development/import-regex/issues/149)) ([31ef112](https://github.com/flex-development/import-regex/commit/31ef112a8c7e35f367faaf30513004f3c5a98a89))
+* **deps-dev:** Bump semver from 7.4.0 to 7.5.0 ([#169](https://github.com/flex-development/import-regex/issues/169)) ([252b469](https://github.com/flex-development/import-regex/commit/252b469eea8a257b4425a3029ff83331ce03b385))
+* **deps-dev:** Bump semver from 7.5.0 to 7.5.1 ([#198](https://github.com/flex-development/import-regex/issues/198)) ([5f1b5db](https://github.com/flex-development/import-regex/commit/5f1b5dbeddd135575ffff1ce624555825e0001d6))
+* **deps-dev:** Bump semver from 7.5.1 to 7.5.2 ([#222](https://github.com/flex-development/import-regex/issues/222)) ([3a0e4fd](https://github.com/flex-development/import-regex/commit/3a0e4fd8bfe9b1333970f2afc2d7bdd8b3052c6c))
+* **deps-dev:** Bump the conventional-changelog group with 5 updates ([#238](https://github.com/flex-development/import-regex/issues/238)) ([12e36bc](https://github.com/flex-development/import-regex/commit/12e36bceb8258cb647422aec5e14e4bacca143cc))
+* **deps-dev:** Bump the typescript-eslint group with 2 updates ([#239](https://github.com/flex-development/import-regex/issues/239)) ([ed18986](https://github.com/flex-development/import-regex/commit/ed189861905a725df7e0e7de190c49a4f30ac85e))
+* **deps-dev:** Bump vite from 4.2.1 to 4.3.4 ([#171](https://github.com/flex-development/import-regex/issues/171)) ([4bbe5fa](https://github.com/flex-development/import-regex/commit/4bbe5fa9d1d3f6653bed3b61371d34f6acdfd7d6))
+* **deps-dev:** Bump vite from 4.3.4 to 4.3.5 ([#174](https://github.com/flex-development/import-regex/issues/174)) ([db1b039](https://github.com/flex-development/import-regex/commit/db1b039782969c32112d658ec492bf6afab64d01))
+* **deps-dev:** Bump vite from 4.3.5 to 4.3.9 ([#205](https://github.com/flex-development/import-regex/issues/205)) ([bc1da1f](https://github.com/flex-development/import-regex/commit/bc1da1f2a3ffd9db9ce2a12fe495e34dac6aa269))
+* **deps-dev:** Bump vite-tsconfig-paths from 4.0.9 to 4.1.0 ([#148](https://github.com/flex-development/import-regex/issues/148)) ([026cc83](https://github.com/flex-development/import-regex/commit/026cc8366e65fbae5118ba9b749161408b6f0ec9))
+* **deps-dev:** Bump vite-tsconfig-paths from 4.1.0 to 4.2.0 ([#157](https://github.com/flex-development/import-regex/issues/157)) ([7bb356f](https://github.com/flex-development/import-regex/commit/7bb356fca26fbf673fd8743c44a27c01e78fcfdb))
+* **deps-dev:** Bump vitest from 0.30.0 to 0.31.0 ([#167](https://github.com/flex-development/import-regex/issues/167)) ([0be02c0](https://github.com/flex-development/import-regex/commit/0be02c0a9383753226e52bfeb671a4b81376b967))
+* **deps-dev:** Bump yaml-eslint-parser from 1.2.0 to 1.2.2 ([#180](https://github.com/flex-development/import-regex/issues/180)) ([49752d0](https://github.com/flex-development/import-regex/commit/49752d0c4cb48ba98c1c6c3d3399ca65f4699a35))
+* **deps-dev:** drop conventional-commits-parser ([1b8f943](https://github.com/flex-development/import-regex/commit/1b8f94317fe7d75f4a771afee470876c108c55e7))
+* **nvm:** require `>=16.20.0` ([5447e19](https://github.com/flex-development/import-regex/commit/5447e1940ca1f3ac694b55ab552d629853804475))
+
+
+### :robot: Continuous Integration
+
+* [[@dependabot](https://github.com/dependabot)] configure grouped version updates ([80c8b9c](https://github.com/flex-development/import-regex/commit/80c8b9c7ef2dc5dea8b1cdf7a927f23f666f5b03))
+* **deps:** Bump actions/add-to-project from 0.4.1 to 0.5.0 ([#137](https://github.com/flex-development/import-regex/issues/137)) ([38708f9](https://github.com/flex-development/import-regex/commit/38708f950ddebab94091fb8e9b66d7be267b23aa))
+* **deps:** Bump actions/cache from 3.2.6 to 3.3.0 ([#110](https://github.com/flex-development/import-regex/issues/110)) ([a754f79](https://github.com/flex-development/import-regex/commit/a754f79375320454e8c1d4582f9321249e6bfe13))
+* **deps:** Bump actions/cache from 3.3.0 to 3.3.1 ([#114](https://github.com/flex-development/import-regex/issues/114)) ([9cccb25](https://github.com/flex-development/import-regex/commit/9cccb25aa1e8b0c8e5903eb80358b544aadadaf4))
+* **deps:** Bump actions/checkout from 3.3.0 to 3.4.0 ([#118](https://github.com/flex-development/import-regex/issues/118)) ([9334c02](https://github.com/flex-development/import-regex/commit/9334c02567085999165e8e8d05a18f4c35c699da))
+* **deps:** Bump actions/checkout from 3.4.0 to 3.5.0 ([#129](https://github.com/flex-development/import-regex/issues/129)) ([504dbfa](https://github.com/flex-development/import-regex/commit/504dbfa35495f0b83680af3b08830632215977f1))
+* **deps:** Bump actions/checkout from 3.5.0 to 3.5.1 ([#156](https://github.com/flex-development/import-regex/issues/156)) ([65d43b6](https://github.com/flex-development/import-regex/commit/65d43b62cd155898da9b1a9da052994d89a9c94a))
+* **deps:** Bump actions/checkout from 3.5.1 to 3.5.2 ([#158](https://github.com/flex-development/import-regex/issues/158)) ([8f6ed03](https://github.com/flex-development/import-regex/commit/8f6ed03a357fea71bda138f7c15da027b31dff03))
+* **deps:** Bump actions/checkout from 3.5.2 to 3.5.3 ([#218](https://github.com/flex-development/import-regex/issues/218)) ([f274121](https://github.com/flex-development/import-regex/commit/f2741213f2fd0e85f016439354c1d9ba14ff595f))
+* **deps:** Bump actions/github-script from 6.4.0 to 6.4.1 ([#142](https://github.com/flex-development/import-regex/issues/142)) ([69750b4](https://github.com/flex-development/import-regex/commit/69750b4a9b266aaa27cadc1cd44bbcf7ac98644b))
+* **deps:** Bump actions/setup-node from 3.6.0 to 3.7.0 ([#230](https://github.com/flex-development/import-regex/issues/230)) ([36b7550](https://github.com/flex-development/import-regex/commit/36b755022da887e85fa2eb4388299ac7f1fa3fb4))
+* **deps:** Bump codecov/codecov-action from 3.1.1 to 3.1.2 ([#151](https://github.com/flex-development/import-regex/issues/151)) ([e4d7001](https://github.com/flex-development/import-regex/commit/e4d7001619ef299352f9742880ad33677fe9e65e))
+* **deps:** Bump codecov/codecov-action from 3.1.2 to 3.1.3 ([#162](https://github.com/flex-development/import-regex/issues/162)) ([30e7829](https://github.com/flex-development/import-regex/commit/30e7829fe5bc9731bef2cac731f3b6d1d2bdf937))
+* **deps:** Bump codecov/codecov-action from 3.1.3 to 3.1.4 ([#191](https://github.com/flex-development/import-regex/issues/191)) ([ebde2de](https://github.com/flex-development/import-regex/commit/ebde2def1c89d04058f0ee85de21bb3e234252ad))
+* **deps:** Bump crazy-max/ghaction-import-gpg from 5.2.0 to 5.3.0 ([#173](https://github.com/flex-development/import-regex/issues/173)) ([62bd107](https://github.com/flex-development/import-regex/commit/62bd1074c248a2550fc858f3d0327297d4d38d62))
+* **deps:** Bump dependabot/fetch-metadata from 1.3.6 to 1.4.0 ([#159](https://github.com/flex-development/import-regex/issues/159)) ([bd8df36](https://github.com/flex-development/import-regex/commit/bd8df367c35e756a0d4b831288cf942a8dabe9ca))
+* **deps:** Bump dependabot/fetch-metadata from 1.4.0 to 1.5.1 ([#202](https://github.com/flex-development/import-regex/issues/202)) ([9c5f836](https://github.com/flex-development/import-regex/commit/9c5f8365b05928c059bebc126b7f5b98747967c3))
+* **deps:** Bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 ([#224](https://github.com/flex-development/import-regex/issues/224)) ([17ce79a](https://github.com/flex-development/import-regex/commit/17ce79a181bca21a4d0fd0ea27f3c65cb09d134a))
+* **deps:** Bump dessant/lock-threads from 4.0.0 to 4.0.1 ([#219](https://github.com/flex-development/import-regex/issues/219)) ([2d2197d](https://github.com/flex-development/import-regex/commit/2d2197dc356dff6ecbd2409f55b5a5d1ac5999ef))
+* **deps:** Bump octokit/graphql-action from 2.2.23 to 2.2.24 ([#143](https://github.com/flex-development/import-regex/issues/143)) ([c0eb849](https://github.com/flex-development/import-regex/commit/c0eb8492a39ac968721effd409608f3d64a2fea7))
+* **deps:** Bump octokit/graphql-action from 2.2.23 to 2.2.24 ([#147](https://github.com/flex-development/import-regex/issues/147)) ([aebaeb6](https://github.com/flex-development/import-regex/commit/aebaeb62239c35ada1a0bbde17f4294c09addc91))
+* **deps:** Bump octokit/graphql-action from 2.2.24 to 2.2.25 ([#234](https://github.com/flex-development/import-regex/issues/234)) ([4326e1c](https://github.com/flex-development/import-regex/commit/4326e1cefaab3d661fab26b2f06fe558d2ead8ff))
+* **workflows:** [`approve-pr`] remove `dependabot-metadata` condition ([d96d29d](https://github.com/flex-development/import-regex/commit/d96d29d15db3add3b53223c756f45e03c6a613a2))
+* **workflows:** add `auto-merge` ([23555b6](https://github.com/flex-development/import-regex/commit/23555b62a1d2e3af5facb45e9bf66d5b97eecae0))
+* **workflows:** add `cache-cleanup` ([2226de4](https://github.com/flex-development/import-regex/commit/2226de4b32c70ba0317370e3240aabcbd3010819))
+* **workflows:** add `infrastructure` ([b2ae9fa](https://github.com/flex-development/import-regex/commit/b2ae9fa40a25cd020a1bcd8b37b520aff8c6ed00))
+
+
+### :house_with_garden: Housekeeping
+
+* analyze types distribution ([9750a03](https://github.com/flex-development/import-regex/commit/9750a039b3cac1e2dc8fa43b58198d435a337729))
+* sync config files ([f718651](https://github.com/flex-development/import-regex/commit/f718651700a32b4c440dd7be3f31ae2a815f422b))
+* update dev and test environments ([0e955a6](https://github.com/flex-development/import-regex/commit/0e955a6b6849b1b7233cab1e105cfdee22f0f179))
+
 ## [2.0.3](https://github.com/flex-development/import-regex/compare/2.0.2...2.0.3) (2023-03-02)
 
 
