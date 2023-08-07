@@ -85,7 +85,7 @@
     "@flex-development/mlly": "1.0.0-alpha.15",
     "@flex-development/pathe": "2.0.0",
     "@flex-development/tsconfig-utils": "1.1.2",
-    "@flex-development/tutils": "6.0.0-alpha.14",
+    "@flex-development/tutils": "6.0.0-alpha.15",
     "@graphql-eslint/eslint-plugin": "3.20.1",
     "@types/chai": "4.3.5",
     "@types/conventional-changelog": "3.1.1",
@@ -156,7 +156,7 @@
   },
   "resolutions": {
     "@ardatan/sync-fetch": "larsgw/sync-fetch#head=worker_threads",
-    "@flex-development/tutils": "6.0.0-alpha.14"
+    "@flex-development/tutils": "6.0.0-alpha.15"
   },
   "engines": {
     "node": ">=16.20.0",
